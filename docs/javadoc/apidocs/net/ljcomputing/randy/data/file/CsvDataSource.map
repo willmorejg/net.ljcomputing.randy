@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="86,11,215,66"/>
+<area shape="rect" id="node1" href="../DataSource.html" title="&lt;TABLE&gt;" alt="" coords="75,6,226,71"/>
+<area shape="rect" id="node2_1" href="./AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="15,131,163,157"/>
+<area shape="rect" id="node2" href="./AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,120,174,168"/>
+<area shape="rect" id="node3_2" href="./CsvDataSource.html" title="net.ljcomputing.randy.data.file.CsvDataSource" alt="" coords="98,227,203,253"/>
+<area shape="rect" id="node3" href="./CsvDataSource.html" title="&lt;TABLE&gt;" alt="" coords="87,216,214,264"/>
+</map>
