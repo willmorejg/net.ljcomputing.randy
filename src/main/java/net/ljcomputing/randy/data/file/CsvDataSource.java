@@ -17,12 +17,19 @@
 package net.ljcomputing.randy.data.file;
 
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.net.URI;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
+
+import org.apache.commons.csv.CSVFormat;
+import org.apache.commons.csv.CSVParser;
+import org.apache.commons.csv.CSVRecord;
 
 import net.ljcomputing.randy.data.DataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
@@ -46,10 +53,9 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
    */
   public CsvDataSource(final String uri) throws DataSourceException {
     super(uri);
-    convertUri();
     countLines();
   }
-  
+
   /**
    * Convert the URI to determine the underlying data source 
    * (the file to use as the CSV data source).
@@ -58,7 +64,7 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
    */
   private String convertUri() {
     final StringBuilder result = new StringBuilder();
-    
+
     if (getDataSource() != null) {
       final URI theUri = getDataSource();
       final String rawUri = theUri.toString(); //NOPMD
@@ -68,7 +74,7 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
 
     return result.toString();
   }
-  
+
   /**
    * Gets the stream.
    *
@@ -105,11 +111,12 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
   @Override
   public String read(final int record) throws DataSourceException {
     String result;
-    
+
     try {
-      final Stream<String> lines = getStream();
-      result = lines.skip(record).findFirst().get(); //NOPMD
-      lines.close(); //NOPMD
+      final String value = readRecordValue(record);
+      final StringReader reader = new StringReader(value);
+      result = getValue(reader, 0); //NOPMD
+      reader.close(); //NOPMD
     } catch (IOException exception) {
       throw new DataSourceException("IO Exception", exception);
     } catch (NoSuchElementException exception) {
@@ -117,6 +124,39 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
     }
 
     return result;
+  }
+  
+  /**
+   * Read record value.
+   *
+   * @param record the record
+   * @return the string
+   * @throws DataSourceException the data source exception
+   */
+  private String readRecordValue(final int record) throws DataSourceException {
+    try {
+      final Stream<String> lines = getStream();
+      final String line = lines.skip(record).findFirst().get(); //NOPMD
+      lines.close(); //NOPMD
+      return line;
+    } catch (IOException exception) {
+      throw new DataSourceException("IO Exception", exception);
+    }
+  }
+  
+  /**
+   * Gets the csv parser.
+   *
+   * @param reader the reader
+   * @return the csv parser
+   * @throws IOException IOException
+   */
+  private static final String getValue(final Reader reader, final int index) throws IOException {
+    @SuppressWarnings("resource")
+    final CSVParser csvParser = new CSVParser(reader, CSVFormat.RFC4180);
+    final List<CSVRecord> csvRecords = csvParser.getRecords();
+    final CSVRecord csvRecord  = csvRecords.get(0); //NOPMD
+    return csvRecord.get(index); //NOPMD
   }
 
   /**
