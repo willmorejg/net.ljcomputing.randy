@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.randomizer.UsStatesRamdomizer
-	c262 [label=<<table title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsStatesRamdomizer.html">
+	c263 [label=<<table title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsStatesRamdomizer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsStatesRamdomizer </td></tr>
@@ -18,21 +18,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../UsStatesRamdomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.randomizer.AbstractRandomizer
-	c263 [label=<<table title="net.ljcomputing.randy.randomizer.AbstractRandomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractRandomizer.html">
+	c264 [label=<<table title="net.ljcomputing.randy.randomizer.AbstractRandomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AbstractRandomizer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractRandomizer </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.randomizer </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../AbstractRandomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl
-	c264 [label=<<table title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsStatesRamdomizerImpl.html">
+	c265 [label=<<table title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsStatesRamdomizerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsStatesRamdomizerImpl </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsStatesRamdomizerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl extends net.ljcomputing.randy.randomizer.AbstractRandomizer
-	c263:p -> c264:p [dir=back,arrowtail=empty];
+	c264:p -> c265:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl implements net.ljcomputing.randy.randomizer.UsStatesRamdomizer
-	c262:p -> c264:p [dir=back,arrowtail=empty,style=dashed];
+	c263:p -> c265:p [dir=back,arrowtail=empty,style=dashed];
 }
 
