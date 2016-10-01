@@ -58,6 +58,7 @@ public interface DataSource {
    * Gets the maximum size of the data source (maximum number of records available).
    *
    * @return the max size
+   * @throws DataSourceException the data source exception
    */
-  long getMaxSize();
+  long getMaxSize() throws DataSourceException;
 }

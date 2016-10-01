@@ -29,6 +29,16 @@ import net.ljcomputing.randy.generator.BaseGenerator;
 import net.ljcomputing.randy.generator.Generator;
 
 /**
+ * <p>Abstract implementation of a data randomizer.</p>
+ * <p> This abstract implementation relies on the 
+ * <b>applications.properties</b>, which configures the data source URI 
+ * and buffer size. Configuration outside of the code allows the implementation 
+ * classes to focus on the actual implementation of returning random data 
+ * and loose coupling.</p>
+ * 
+ * <p>{@link net.ljcomputing.randy.data.file.DataSourceType} 
+ * returns the actual data source implementation based upon the URI provided.</p>
+ * 
  * @author James G. Willmore
  *
  */
@@ -38,7 +48,7 @@ public abstract class AbstractRandomizer { //NOPMD
   private static final String PROP_FILENAME = "application.properties";
 
   /** The Constant PROPERTY_URL. */
-  private static final String PROP_URL = ".url";
+  private static final String PROP_URL = ".uri";
 
   /** The Constant PROPERTY_BUFFER_SIZE. */
   private static final String PROP_BUFFER_SIZE = ".bufferSize";

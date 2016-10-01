@@ -17,10 +17,6 @@
 package net.ljcomputing.randy.data.file;
 
 import java.io.IOException;
-import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
@@ -35,9 +31,6 @@ import net.ljcomputing.randy.exception.DataSourceException;
  */
 public class FileDataSource extends AbstractFileDataSource implements DataSource {
 
-  /** The max file size. */
-  private transient long maxFileSize;
-
   /**
    * Instantiates a new file data source.
    *
@@ -46,37 +39,6 @@ public class FileDataSource extends AbstractFileDataSource implements DataSource
    */
   public FileDataSource(final String uri) throws DataSourceException {
     super(uri);
-    countLines();
-  }
-  
-  /**
-   * Gets the stream.
-   *
-   * @return the stream
-   * @throws IOException Signals that an I/O exception has occurred.
-   * @throws DataSourceException the data source exception
-   */
-  private Stream<String> getStream() throws IOException, DataSourceException {
-    final URI uri = getDataSource();
-    final Path path = Paths.get(uri);
-    return Files.lines(path);
-  }
-
-  /**
-   * Count lines.
-   *
-   * @throws DataSourceException the data source exception
-   */
-  private void countLines() throws DataSourceException {
-    try {
-      final Stream<String> lines = getStream();
-      maxFileSize = (int) lines.count(); //NOPMD
-      lines.close(); //NOPMD
-    } catch (IOException exception) {
-      throw new DataSourceException("IO Exception", exception);
-    } catch (NoSuchElementException exception) {
-      throw new DataSourceException("Given record does not exist.", exception);
-    }
   }
 
   /**
@@ -97,13 +59,5 @@ public class FileDataSource extends AbstractFileDataSource implements DataSource
     }
 
     return result;
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.file.AbstractFileDataSource#getMaxSize()
-   */
-  @Override
-  public long getMaxSize() {
-    return maxFileSize;
   }
 }

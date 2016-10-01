@@ -19,10 +19,6 @@ package net.ljcomputing.randy.data.file;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.StringReader;
-import java.net.URI;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
@@ -42,9 +38,6 @@ import net.ljcomputing.randy.exception.DataSourceException;
  */
 public class CsvDataSource extends AbstractFileDataSource implements DataSource {
 
-  /** The max file size. */
-  private transient long maxFileSize;
-
   /**
    * Instantiates a new file data source.
    *
@@ -52,57 +45,7 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
    * @throws DataSourceException the data source exception
    */
   public CsvDataSource(final String uri) throws DataSourceException {
-    super(uri);
-    countLines();
-  }
-
-  /**
-   * Convert the URI to determine the underlying data source 
-   * (the file to use as the CSV data source).
-   *
-   * @return the string
-   */
-  private String convertUri() {
-    final StringBuilder result = new StringBuilder();
-
-    if (getDataSource() != null) {
-      final URI theUri = getDataSource();
-      final String rawUri = theUri.toString(); //NOPMD
-      final int colonIdx = rawUri.indexOf(':'); //NOPMD
-      result.append(rawUri.substring(colonIdx + 1)); //NOPMD
-    }
-
-    return result.toString();
-  }
-
-  /**
-   * Gets the stream.
-   *
-   * @return the stream
-   * @throws IOException Signals that an I/O exception has occurred.
-   * @throws DataSourceException the data source exception
-   */
-  private Stream<String> getStream() throws IOException, DataSourceException {
-    final URI newUri = URI.create(convertUri());
-    final Path path = Paths.get(newUri);
-    return Files.lines(path);
-  }
-
-  /**
-   * Count lines.
-   *
-   * @throws DataSourceException the data source exception
-   */
-  private void countLines() throws DataSourceException {
-    try {
-      final Stream<String> lines = getStream();
-      maxFileSize = (int) lines.count(); //NOPMD 
-      lines.close(); //NOPMD
-    } catch (IOException exception) {
-      throw new DataSourceException("IO Exception", exception);
-    } catch (NoSuchElementException exception) {
-      throw new DataSourceException("Given record does not exist.", exception);
-    }
+    super(convertUri(uri));
   }
 
   /**
@@ -158,13 +101,5 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
     final List<CSVRecord> csvRecords = csvParser.getRecords();
     final CSVRecord csvRecord  = csvRecords.get(0); //NOPMD
     return csvRecord.get(index); //NOPMD
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.file.AbstractFileDataSource#getMaxSize()
-   */
-  @Override
-  public long getMaxSize() {
-    return maxFileSize;
   }
 }

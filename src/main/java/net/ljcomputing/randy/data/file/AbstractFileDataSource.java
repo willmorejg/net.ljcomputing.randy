@@ -16,10 +16,16 @@
 
 package net.ljcomputing.randy.data.file;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.NoSuchElementException;
+import java.util.stream.Stream;
 
 import net.ljcomputing.randy.data.DataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
@@ -31,9 +37,15 @@ import net.ljcomputing.randy.exception.DataSourceException;
  *
  */
 public abstract class AbstractFileDataSource implements DataSource {
+  
+  /** The Constant ZERO. */
+  private static final long ZERO = 0L;
 
   /** The data source. */
   private final transient URI dataSource;
+
+  /** The max file size. */
+  private transient long maxFileSize;
 
   /**
    * Instantiates a new abstract file data source.
@@ -50,6 +62,55 @@ public abstract class AbstractFileDataSource implements DataSource {
   }
 
   /**
+   * Convert the URI to determine the underlying data source 
+   * (the file to use as the CSV data source).
+   *
+   * @return the string
+   */
+  protected static String convertUri(final String theUri) {
+    final StringBuilder result = new StringBuilder();
+
+    if (theUri != null) {
+      final String rawUri = theUri;
+      final int colonIdx = rawUri.indexOf(':'); //NOPMD
+      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD
+      result.append(newUri);
+    }
+
+    return result.toString();
+  }
+
+  /**
+   * Gets the stream.
+   *
+   * @return the stream
+   * @throws IOException Signals that an I/O exception has occurred.
+   * @throws DataSourceException the data source exception
+   */
+  protected Stream<String> getStream() throws IOException, DataSourceException {
+    final URI uri = getDataSource();
+    final Path path = Paths.get(uri);
+    return Files.lines(path);
+  }
+
+  /**
+   * Sets the max file size.
+   *
+   * @throws DataSourceException the data source exception
+   */
+  private void setMaxFileSize() throws DataSourceException {
+    try {
+      final Stream<String> lines = getStream();
+      maxFileSize = (int) lines.count(); //NOPMD
+      lines.close(); //NOPMD
+    } catch (IOException exception) {
+      throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD
+    } catch (NoSuchElementException exception) {
+      throw new DataSourceException("Given record does not exist.", exception);
+    }
+  }
+
+  /**
    * @see net.ljcomputing.randy.data.DataSource#read(int)
    */
   @Override
@@ -62,7 +123,7 @@ public abstract class AbstractFileDataSource implements DataSource {
   public URI getDataSource() {
     return dataSource;
   }
-  
+
   /**
    * @see net.ljcomputing.randy.data.DataSource#toUrl()
    */
@@ -74,10 +135,16 @@ public abstract class AbstractFileDataSource implements DataSource {
       throw new DataSourceException("URL of data source is invalid.", exception);
     }
   }
-  
+
   /**
-   * @see net.ljcomputing.randy.data.DataSource#getMaxSize()
+   * @see net.ljcomputing.randy.data.file.AbstractFileDataSource#getMaxSize()
    */
   @Override
-  public abstract long getMaxSize();
+  public long getMaxSize() throws DataSourceException {
+    if (maxFileSize == ZERO) {
+      setMaxFileSize();
+    }
+    
+    return maxFileSize;
+  }
 }

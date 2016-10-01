@@ -16,35 +16,29 @@
 
 package net.ljcomputing.randy.randomizer.impl;
 
+import org.junit.Test;
+
 import net.ljcomputing.randy.exception.RandomizerException;
-import net.ljcomputing.randy.randomizer.AbstractRandomizer;
 import net.ljcomputing.randy.randomizer.UsStatesRamdomizer;
 
 /**
- * Implementation of a US states data randomizer.
- * 
  * @author James G. Willmore
  *
  */
-public class UsStatesRamdomizerImpl extends AbstractRandomizer implements UsStatesRamdomizer {
-  
-  /** The Constant PROPERTY_PREFIX. */
-  private static final String PROPERTY_PREFIX = "random.us.states";
+public class UsStatesRamdomizerImplTest {
 
   /**
-   * Instantiates a new us states ramdomizer impl.
-   *
-   * @throws RandomizerException the randomizer exception
+   * Test method for 
+   * {@link net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl#state()}.
+   * @throws RandomizerException Randomizer Exception
    */
-  public UsStatesRamdomizerImpl() throws RandomizerException {
-    super(PROPERTY_PREFIX);
+  @Test
+  public void testState() throws RandomizerException {
+    final UsStatesRamdomizer rand = new UsStatesRamdomizerImpl(); //NOPMD
+
+    for (int s = 0; s < 10; s++) {
+      System.out.println(rand.state()); //NOPMD
+    }
   }
 
-  /**
-   * @see net.ljcomputing.randy.randomizer.UsStatesRamdomizer#state()
-   */
-  @Override
-  public String state() throws RandomizerException {
-    return generator.generate();
-  }
 }

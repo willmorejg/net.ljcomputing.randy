@@ -45,18 +45,39 @@ public class BaseGenerator implements Generator {
    */
   public BaseGenerator(final DataSource dataSource, final int bufferSize)
       throws GeneratorException {
+    buffer = new String[bufferSize];
+    fillBuffer(dataSource, bufferSize);
+  }
+
+  /**
+   * Gets the max integer for random number generation.
+   *
+   * @param dataSource the data source
+   * @return the max int
+   * @throws DataSourceException the data source exception
+   */
+  private static int getMaxInt(final DataSource dataSource) throws DataSourceException {
     final long maxSize = dataSource.getMaxSize();
     final Long maxLong = Long.valueOf(maxSize);
-    final int maxInt = maxLong.intValue();
-    buffer = new String[bufferSize];
+    return maxLong.intValue() - 1; //NOPMD
+  }
 
+  /**
+   * Fill buffer.
+   *
+   * @param dataSource the data source
+   * @param bufferSize the buffer size
+   * @throws GeneratorException the generator exception
+   */
+  private void fillBuffer(final DataSource dataSource, final int bufferSize)
+      throws GeneratorException {
     for (int e = 0; e < bufferSize; e++) {
-      final int nextInt = rand.nextInt(maxInt - 1);
-
       try {
+        final int maxInt = getMaxInt(dataSource);
+        final int nextInt = rand.nextInt(maxInt);
         buffer[e] = dataSource.read(nextInt);
       } catch (DataSourceException exception) {
-        throw new GeneratorException("Exception ecountered while filling buffer.", exception);
+        throw new GeneratorException("Exception encountered while filling buffer", exception);
       }
     }
   }

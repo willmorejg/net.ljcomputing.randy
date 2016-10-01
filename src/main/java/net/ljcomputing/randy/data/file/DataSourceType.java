@@ -67,11 +67,11 @@ public enum DataSourceType {
   /**
    * Gets the type.
    *
-   * @param url the url
+   * @param uri the URI of the data source
    * @return the type
    */
-  public static DataSourceType getType(final String url) { //NOPMD
-    final String theScheme = url.substring(0, url.indexOf(':')); //NOPMD
+  public static DataSourceType getType(final String uri) { //NOPMD
+    final String theScheme = uri.substring(0, uri.indexOf(':')); //NOPMD
 
     for (final DataSourceType type : values()) {
       if (type.getScheme().equals(theScheme)) { //NOPMD
