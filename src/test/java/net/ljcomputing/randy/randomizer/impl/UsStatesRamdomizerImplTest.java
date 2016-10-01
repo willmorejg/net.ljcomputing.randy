@@ -25,7 +25,7 @@ import net.ljcomputing.randy.randomizer.UsStatesRamdomizer;
  * @author James G. Willmore
  *
  */
-public class UsStatesRamdomizerImplTest {
+public class UsStatesRamdomizerImplTest { //NOPMD
 
   /**
    * Test method for 
