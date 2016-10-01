@@ -37,6 +37,13 @@ digraph G {
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.data.file </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./file/CsvDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.randy.generator.BaseGenerator
+	c162 [label=<<table title="net.ljcomputing.randy.generator.BaseGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/BaseGenerator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> BaseGenerator </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.generator </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../generator/BaseGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.randy.data.file.FileDataSource extends net.ljcomputing.randy.data.file.AbstractFileDataSource
 	c154:p -> c152:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.randy.data.file.FileDataSource implements net.ljcomputing.randy.data.DataSource
@@ -47,5 +54,7 @@ digraph G {
 	c154:p -> c155:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.randy.data.file.CsvDataSource implements net.ljcomputing.randy.data.DataSource
 	c151:p -> c155:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.randy.generator.BaseGenerator DEPEND net.ljcomputing.randy.data.DataSource
+	c162:p -> c151:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 
