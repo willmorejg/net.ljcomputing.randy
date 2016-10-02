@@ -27,7 +27,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-import net.ljcomputing.randy.data.DataSource;
+import net.ljcomputing.randy.data.RecordBasedDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
 /**
@@ -36,7 +36,10 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-public class CsvDataSource extends AbstractFileDataSource implements DataSource {
+public class CsvDataSource extends AbstractFileDataSource implements RecordBasedDataSource {
+  
+  /** The record position. */
+  private transient int recordPosition;
 
   /**
    * Instantiates a new file data source.
@@ -58,7 +61,7 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
     try {
       final String value = readRecordValue(record);
       final StringReader reader = new StringReader(value);
-      result = getValue(reader, 0); //NOPMD
+      result = getValue(reader); //NOPMD
       reader.close(); //NOPMD
     } catch (IOException exception) {
       throw new DataSourceException("IO Exception", exception);
@@ -79,8 +82,8 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
   private String readRecordValue(final int record) throws DataSourceException {
     try {
       final Stream<String> lines = getStream();
-      final String line = lines.skip(record).findFirst().get(); //NOPMD
-      lines.close(); //NOPMD
+      final String line = lines.skip(record).findFirst().get(); 
+      lines.close(); 
       return line;
     } catch (IOException exception) {
       throw new DataSourceException("IO Exception", exception);
@@ -91,15 +94,30 @@ public class CsvDataSource extends AbstractFileDataSource implements DataSource 
    * Gets the csv parser.
    *
    * @param reader the reader
-   * @param index the index
    * @return the csv parser
    * @throws IOException IOException
    */
-  private static final String getValue(final Reader reader, final int index) throws IOException {
+  private final String getValue(final Reader reader) throws IOException {
     @SuppressWarnings("resource")
     final CSVParser csvParser = new CSVParser(reader, CSVFormat.RFC4180);
     final List<CSVRecord> csvRecords = csvParser.getRecords();
-    final CSVRecord csvRecord  = csvRecords.get(0); //NOPMD
-    return csvRecord.get(index); //NOPMD
+    final CSVRecord csvRecord  = csvRecords.get(0); 
+    return csvRecord.get(getRecordPosition()); 
+  }
+
+  /**
+   * @see net.ljcomputing.randy.data.RecordBasedDataSource#getRecordPosition()
+   */
+  @Override
+  public int getRecordPosition() {
+    return recordPosition;
+  }
+
+  /**
+   * @see net.ljcomputing.randy.data.RecordBasedDataSource#setRecordPosition(int)
+   */
+  @Override
+  public void setRecordPosition(final int index) {
+    recordPosition = index;
   }
 }

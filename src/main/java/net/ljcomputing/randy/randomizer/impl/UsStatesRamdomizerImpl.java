@@ -17,7 +17,7 @@
 package net.ljcomputing.randy.randomizer.impl;
 
 import net.ljcomputing.randy.exception.RandomizerException;
-import net.ljcomputing.randy.randomizer.AbstractRandomizer;
+import net.ljcomputing.randy.randomizer.Randomizer;
 import net.ljcomputing.randy.randomizer.UsStatesRamdomizer;
 
 /**
@@ -26,7 +26,7 @@ import net.ljcomputing.randy.randomizer.UsStatesRamdomizer;
  * @author James G. Willmore
  *
  */
-public class UsStatesRamdomizerImpl extends AbstractRandomizer implements UsStatesRamdomizer {
+public class UsStatesRamdomizerImpl extends Randomizer implements UsStatesRamdomizer {
   
   /** The Constant PROPERTY_PREFIX. */
   private static final String PROPERTY_PREFIX = "random.us.states";

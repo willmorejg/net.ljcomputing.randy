@@ -14,22 +14,29 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randy.generator;
+package net.ljcomputing.randy.data;
 
 /**
- * Base implementation of a generator.
+ * A record-based data source. Adds the ability to retrieve datum from a data 
+ * source record based upon the position within the record. For example: the 
+ * specific column of a database record.
  * 
  * @author James G. Willmore
  *
  */
-public class BaseGenerator extends AbstractGenerator {
-
+public interface RecordBasedDataSource extends DataSource {
+  
   /**
-   * Instantiates a new abstract generator.
+   * Gets the record position.
    *
-   * @param bufferSize the buffer size
+   * @return the record position
    */
-  public BaseGenerator(final int bufferSize) {
-    super(bufferSize);
-  }
+  int getRecordPosition();
+  
+  /**
+   * Sets the record position.
+   *
+   * @param index the new record position
+   */
+  void setRecordPosition(int index);
 }

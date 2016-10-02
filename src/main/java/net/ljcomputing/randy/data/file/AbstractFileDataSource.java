@@ -37,9 +37,9 @@ import net.ljcomputing.randy.exception.DataSourceException;
  *
  */
 public abstract class AbstractFileDataSource implements DataSource {
-  
-  /** The Constant ZERO. */
-  private static final long ZERO = 0L;
+
+  /** The constant indicating the max file size was not initialized. */
+  private static final long EMPTY_SIZE = 0L;
 
   /** The data source. */
   private final transient URI dataSource;
@@ -73,8 +73,8 @@ public abstract class AbstractFileDataSource implements DataSource {
 
     if (theUri != null) {
       final String rawUri = theUri;
-      final int colonIdx = rawUri.indexOf(':'); //NOPMD
-      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD
+      final int colonIdx = rawUri.indexOf(':'); 
+      final String newUri = rawUri.substring(colonIdx + 1); 
       result.append(newUri);
     }
 
@@ -102,10 +102,10 @@ public abstract class AbstractFileDataSource implements DataSource {
   private void setMaxFileSize() throws DataSourceException {
     try {
       final Stream<String> lines = getStream();
-      maxFileSize = (int) lines.count(); //NOPMD
-      lines.close(); //NOPMD
+      maxFileSize = (int) lines.count(); 
+      lines.close(); 
     } catch (IOException exception) {
-      throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD
+      throw new DataSourceException("IO Exception: " + exception.toString(), exception); 
     } catch (NoSuchElementException exception) {
       throw new DataSourceException("Given record does not exist.", exception);
     }
@@ -142,10 +142,10 @@ public abstract class AbstractFileDataSource implements DataSource {
    */
   @Override
   public long getMaxSize() throws DataSourceException {
-    if (maxFileSize == ZERO) {
+    if (maxFileSize == EMPTY_SIZE) {
       setMaxFileSize();
     }
-    
+
     return maxFileSize;
   }
 }

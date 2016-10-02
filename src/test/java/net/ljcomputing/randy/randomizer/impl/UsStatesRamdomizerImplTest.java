@@ -33,11 +33,32 @@ public class UsStatesRamdomizerImplTest { //NOPMD
    * @throws RandomizerException Randomizer Exception
    */
   @Test
-  public void testState() throws RandomizerException {
-    final UsStatesRamdomizer rand = new UsStatesRamdomizerImpl(); //NOPMD
+  public void testState() {
+    try {
+      final UsStatesRamdomizer rand = new UsStatesRamdomizerImpl(); //NOPMD
 
-    for (int s = 0; s < 10; s++) {
-      System.out.println(rand.state()); //NOPMD
+      for (int s = 0; s < 10; s++) {
+        System.out.println(rand.state()); //NOPMD
+      }
+    } catch (RandomizerException exception) {
+      exception.printStackTrace();
+    }
+  }
+  
+  /**
+   * The main method.
+   *
+   * @param args the arguments
+   */
+  public static void main(final String ... args) {
+    try {
+      final UsStatesRamdomizer rand = new UsStatesRamdomizerImpl(); //NOPMD
+
+      for (int s = 0; s < 10; s++) {
+        System.out.println(rand.state()); //NOPMD
+      }
+    } catch (RandomizerException exception) {
+      exception.printStackTrace();
     }
   }
 

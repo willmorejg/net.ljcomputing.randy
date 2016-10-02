@@ -16,6 +16,9 @@
 
 package net.ljcomputing.randy.generator;
 
+import net.ljcomputing.randy.data.DataSource;
+import net.ljcomputing.randy.exception.GeneratorException;
+
 /**
  * Interface shared by all generators.
  * 
@@ -23,6 +26,14 @@ package net.ljcomputing.randy.generator;
  *
  */
 public interface Generator {
+  
+  /**
+   * Fill buffer with data from data source.
+   *
+   * @param dataSource the data source
+   * @throws GeneratorException the generator exception
+   */
+  void fillBuffer(DataSource dataSource) throws GeneratorException;
   
   /**
    * Generate data.
