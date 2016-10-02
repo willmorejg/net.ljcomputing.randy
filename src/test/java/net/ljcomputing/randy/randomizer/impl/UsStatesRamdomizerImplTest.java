@@ -41,7 +41,7 @@ public class UsStatesRamdomizerImplTest { //NOPMD
         System.out.println(rand.state()); //NOPMD
       }
     } catch (RandomizerException exception) {
-      exception.printStackTrace();
+      exception.printStackTrace(); //NOPMD
     }
   }
   
@@ -58,7 +58,7 @@ public class UsStatesRamdomizerImplTest { //NOPMD
         System.out.println(rand.state()); //NOPMD
       }
     } catch (RandomizerException exception) {
-      exception.printStackTrace();
+      exception.printStackTrace(); //NOPMD
     }
   }
 

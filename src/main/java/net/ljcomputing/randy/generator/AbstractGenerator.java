@@ -55,7 +55,7 @@ public abstract class AbstractGenerator implements Generator {
   private static int getMaxInt(final DataSource dataSource) throws DataSourceException {
     final long maxSize = dataSource.getMaxSize();
     final Long maxLong = Long.valueOf(maxSize);
-    return maxLong.intValue() - 1;
+    return maxLong.intValue() - 1; //NOPMD
   }
 
   /**

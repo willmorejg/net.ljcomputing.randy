@@ -16,6 +16,7 @@
 
 package net.ljcomputing.randy.data;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -57,18 +58,21 @@ public final class DataSourceFactory {
    * @param uri the uri
    * @return the data source mapping
    */
-  private static Class<? extends DataSource> findMapping(final String uri) {
+  private static Class<? extends DataSource> findMapping(final String uri) { //NOPMD
+    Class<? extends DataSource> dataSource = null; //NOPMD
+    
     if (uri != null) {
       final int index = uri.indexOf(':');
-      final String theScheme = uri.substring(0, index);
+      final String theScheme = uri.substring(0, index); //NOPMD
       for (final String scheme : MAP.keySet()) {
-        if (scheme.equals(theScheme)) {
-          return MAP.get(scheme);
+        if (scheme.equals(theScheme)) { //NOPMD
+          dataSource = MAP.get(scheme);
+          break;
         }
       }
     }
 
-    return null;
+    return dataSource;
   }
 
   /**
@@ -87,14 +91,15 @@ public final class DataSourceFactory {
 
     try {
       if (dsImpl != null) {
-        return dsImpl.getConstructor(String.class).newInstance(uri);
-      } else {
-        throw new DataSourceException("Data source implementation [uri = " + uri + "] not found");
+        Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
+        return constructor.newInstance(uri); //NOPMD
       }
+
+      throw new DataSourceException("Data source implementation [uri = " + uri + "] not found");
     } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
         | InvocationTargetException | NoSuchMethodException | SecurityException exception) {
-      throw new DataSourceException("Exception encountered instaniating data source implementation",
-          exception);
+      throw new DataSourceException("Exception encountered instaniating data source implementation "
+          + "[uri = " + uri + "]", exception);
     }
   }
 }

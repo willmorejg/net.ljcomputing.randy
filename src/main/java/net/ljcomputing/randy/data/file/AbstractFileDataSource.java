@@ -73,8 +73,8 @@ public abstract class AbstractFileDataSource implements DataSource {
 
     if (theUri != null) {
       final String rawUri = theUri;
-      final int colonIdx = rawUri.indexOf(':'); 
-      final String newUri = rawUri.substring(colonIdx + 1); 
+      final int colonIdx = rawUri.indexOf(':'); //NOPMD
+      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD
       result.append(newUri);
     }
 
@@ -102,10 +102,10 @@ public abstract class AbstractFileDataSource implements DataSource {
   private void setMaxFileSize() throws DataSourceException {
     try {
       final Stream<String> lines = getStream();
-      maxFileSize = (int) lines.count(); 
-      lines.close(); 
+      maxFileSize = (int) lines.count(); //NOPMD
+      lines.close(); //NOPMD
     } catch (IOException exception) {
-      throw new DataSourceException("IO Exception: " + exception.toString(), exception); 
+      throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD
     } catch (NoSuchElementException exception) {
       throw new DataSourceException("Given record does not exist.", exception);
     }

@@ -82,8 +82,8 @@ public class CsvDataSource extends AbstractFileDataSource implements RecordBased
   private String readRecordValue(final int record) throws DataSourceException {
     try {
       final Stream<String> lines = getStream();
-      final String line = lines.skip(record).findFirst().get(); 
-      lines.close(); 
+      final String line = lines.skip(record).findFirst().get(); //NOPMD
+      lines.close(); //NOPMD
       return line;
     } catch (IOException exception) {
       throw new DataSourceException("IO Exception", exception);
@@ -101,8 +101,8 @@ public class CsvDataSource extends AbstractFileDataSource implements RecordBased
     @SuppressWarnings("resource")
     final CSVParser csvParser = new CSVParser(reader, CSVFormat.RFC4180);
     final List<CSVRecord> csvRecords = csvParser.getRecords();
-    final CSVRecord csvRecord  = csvRecords.get(0); 
-    return csvRecord.get(getRecordPosition()); 
+    final CSVRecord csvRecord  = csvRecords.get(0); //NOPMD
+    return csvRecord.get(getRecordPosition()); //NOPMD
   }
 
   /**
