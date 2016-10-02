@@ -1,12 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="141,110,225,151"/>
-<area shape="rect" id="node1" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="130,105,235,157"/>
-<area shape="rect" id="node2_1" href="./file/FileDataSource.html" title="net.ljcomputing.randy.data.file.FileDataSource" alt="" coords="16,310,160,349"/>
-<area shape="rect" id="node2" href="./file/FileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,305,171,354"/>
-<area shape="rect" id="node3_2" href="./file/AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="109,211,257,250"/>
-<area shape="rect" id="node3" href="./file/AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="98,206,267,255"/>
-<area shape="rect" id="node4_3" href="./file/CsvDataSource.html" title="net.ljcomputing.randy.data.file.CsvDataSource" alt="" coords="219,310,363,349"/>
-<area shape="rect" id="node4" href="./file/CsvDataSource.html" title="&lt;TABLE&gt;" alt="" coords="208,305,373,354"/>
-<area shape="rect" id="node5_4" href="../generator/BaseGenerator.html" title="net.ljcomputing.randy.generator.BaseGenerator" alt="" coords="108,11,257,50"/>
-<area shape="rect" id="node5" href="../generator/BaseGenerator.html" title="&lt;TABLE&gt;" alt="" coords="97,6,268,55"/>
+<area shape="rect" id="node1_0" href="./RecordBasedDataSource.html" title="net.ljcomputing.randy.data.RecordBasedDataSource" alt="" coords="15,326,174,367"/>
+<area shape="rect" id="node1" href="./RecordBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,321,185,373"/>
+<area shape="rect" id="node2_1" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="181,225,265,266"/>
+<area shape="rect" id="node2" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="170,219,275,271"/>
+<area shape="rect" id="node3_2" href="./file/FileDataSource.html" title="net.ljcomputing.randy.data.file.FileDataSource" alt="" coords="212,427,356,466"/>
+<area shape="rect" id="node3" href="./file/FileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="201,422,367,471"/>
+<area shape="rect" id="node4_3" href="./file/AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="271,327,419,366"/>
+<area shape="rect" id="node4" href="./file/AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="261,322,430,371"/>
+<area shape="rect" id="node5_4" href="../generator/AbstractGenerator.html" title="net.ljcomputing.randy.generator.AbstractGenerator" alt="" coords="209,126,359,165"/>
+<area shape="rect" id="node5" href="../generator/AbstractGenerator.html" title="&lt;TABLE&gt;" alt="" coords="199,121,369,170"/>
+<area shape="rect" id="node6_5" href="../generator/Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="148,11,297,66"/>
+<area shape="rect" id="node6" href="../generator/Generator.html" title="&lt;TABLE&gt;" alt="" coords="137,6,308,71"/>
 </map>

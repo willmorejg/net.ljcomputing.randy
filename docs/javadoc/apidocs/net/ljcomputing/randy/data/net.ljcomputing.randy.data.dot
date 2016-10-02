@@ -9,12 +9,27 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.randy.data.RecordBasedDataSource
+	c0 [label=<<table title="net.ljcomputing.randy.data.RecordBasedDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RecordBasedDataSource.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RecordBasedDataSource </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RecordBasedDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.data.DataSource
-	c0 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSource.html">
+	c1 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DataSource </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.randy.data.DataSourceFactory
+	c2 [label=<<table title="net.ljcomputing.randy.data.DataSourceFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSourceFactory.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DataSourceFactory </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DataSourceFactory.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.randy.data.RecordBasedDataSource implements net.ljcomputing.randy.data.DataSource
+	c1:p -> c0:p [dir=back,arrowtail=empty,style=dashed];
 }
 

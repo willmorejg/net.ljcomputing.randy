@@ -3,5 +3,5 @@ net.ljcomputing.randy.data.file
 net.ljcomputing.randy.exception
 net.ljcomputing.randy.randomizer
 net.ljcomputing.randy.randomizer.impl
-net.ljcomputing.randy.generator
 net.ljcomputing.randy
+net.ljcomputing.randy.generator

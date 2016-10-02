@@ -9,52 +9,62 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.randy.data.RecordBasedDataSource
+	c217 [label=<<table title="net.ljcomputing.randy.data.RecordBasedDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RecordBasedDataSource.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> RecordBasedDataSource </td></tr>
+		</table></td></tr>
+		</table>>, URL="./RecordBasedDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.data.DataSource
-	c151 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataSource.html">
+	c218 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataSource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DataSource </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.data.file.FileDataSource
-	c152 [label=<<table title="net.ljcomputing.randy.data.file.FileDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./file/FileDataSource.html">
+	c220 [label=<<table title="net.ljcomputing.randy.data.file.FileDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./file/FileDataSource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileDataSource </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.data.file </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./file/FileDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.data.file.AbstractFileDataSource
-	c154 [label=<<table title="net.ljcomputing.randy.data.file.AbstractFileDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./file/AbstractFileDataSource.html">
+	c221 [label=<<table title="net.ljcomputing.randy.data.file.AbstractFileDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./file/AbstractFileDataSource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractFileDataSource </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.data.file </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./file/AbstractFileDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.randy.data.file.CsvDataSource
-	c155 [label=<<table title="net.ljcomputing.randy.data.file.CsvDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./file/CsvDataSource.html">
+	// net.ljcomputing.randy.generator.AbstractGenerator
+	c231 [label=<<table title="net.ljcomputing.randy.generator.AbstractGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/AbstractGenerator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CsvDataSource </td></tr>
-<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.data.file </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./file/CsvDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.randy.generator.BaseGenerator
-	c162 [label=<<table title="net.ljcomputing.randy.generator.BaseGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/BaseGenerator.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> BaseGenerator </td></tr>
+<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractGenerator </font></td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.generator </font></td></tr>
 		</table></td></tr>
-		</table>>, URL="../generator/BaseGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="../generator/AbstractGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.randy.generator.Generator
+	c232 [label=<<table title="net.ljcomputing.randy.generator.Generator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/Generator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> Generator </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.generator </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="../generator/Generator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.randy.data.RecordBasedDataSource implements net.ljcomputing.randy.data.DataSource
+	c218:p -> c217:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.randy.data.file.FileDataSource extends net.ljcomputing.randy.data.file.AbstractFileDataSource
-	c154:p -> c152:p [dir=back,arrowtail=empty];
+	c221:p -> c220:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.randy.data.file.FileDataSource implements net.ljcomputing.randy.data.DataSource
-	c151:p -> c152:p [dir=back,arrowtail=empty,style=dashed];
+	c218:p -> c220:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.randy.data.file.AbstractFileDataSource implements net.ljcomputing.randy.data.DataSource
-	c151:p -> c154:p [dir=back,arrowtail=empty,style=dashed];
-	//net.ljcomputing.randy.data.file.CsvDataSource extends net.ljcomputing.randy.data.file.AbstractFileDataSource
-	c154:p -> c155:p [dir=back,arrowtail=empty];
-	//net.ljcomputing.randy.data.file.CsvDataSource implements net.ljcomputing.randy.data.DataSource
-	c151:p -> c155:p [dir=back,arrowtail=empty,style=dashed];
-	// net.ljcomputing.randy.generator.BaseGenerator DEPEND net.ljcomputing.randy.data.DataSource
-	c162:p -> c151:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c218:p -> c221:p [dir=back,arrowtail=empty,style=dashed];
+	//net.ljcomputing.randy.generator.AbstractGenerator implements net.ljcomputing.randy.generator.Generator
+	c232:p -> c231:p [dir=back,arrowtail=empty,style=dashed];
+	// net.ljcomputing.randy.generator.AbstractGenerator DEPEND net.ljcomputing.randy.data.DataSource
+	c231:p -> c218:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	// net.ljcomputing.randy.generator.Generator DEPEND net.ljcomputing.randy.data.DataSource
+	c232:p -> c218:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 

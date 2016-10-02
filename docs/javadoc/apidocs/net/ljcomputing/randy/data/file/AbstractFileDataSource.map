@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="102,11,231,66"/>
-<area shape="rect" id="node1" href="../DataSource.html" title="&lt;TABLE&gt;" alt="" coords="91,6,242,71"/>
+<area shape="rect" id="node1_0" href="../DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="65,11,194,66"/>
+<area shape="rect" id="node1" href="../DataSource.html" title="&lt;TABLE&gt;" alt="" coords="54,6,205,71"/>
 <area shape="rect" id="node2_1" href="./FileDataSource.html" title="net.ljcomputing.randy.data.file.FileDataSource" alt="" coords="16,227,120,253"/>
 <area shape="rect" id="node2" href="./FileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,216,131,264"/>
-<area shape="rect" id="node3_2" href="./AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="93,131,241,157"/>
-<area shape="rect" id="node3" href="./AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="82,120,251,168"/>
-<area shape="rect" id="node4_3" href="./CsvDataSource.html" title="net.ljcomputing.randy.data.file.CsvDataSource" alt="" coords="213,227,318,253"/>
-<area shape="rect" id="node4" href="./CsvDataSource.html" title="&lt;TABLE&gt;" alt="" coords="202,216,329,264"/>
+<area shape="rect" id="node3_2" href="./AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="117,131,265,157"/>
+<area shape="rect" id="node3" href="./AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="106,120,275,168"/>
+<area shape="rect" id="node4_3" href="./CsvDataSource.html" title="net.ljcomputing.randy.data.file.CsvDataSource" alt="" coords="166,227,271,253"/>
+<area shape="rect" id="node4" href="./CsvDataSource.html" title="&lt;TABLE&gt;" alt="" coords="155,216,282,264"/>
 </map>

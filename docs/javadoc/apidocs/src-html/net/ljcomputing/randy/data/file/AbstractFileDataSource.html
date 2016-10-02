@@ -45,9 +45,9 @@
 <span class="sourceLineNo">037</span> *<a name="line.37"></a>
 <span class="sourceLineNo">038</span> */<a name="line.38"></a>
 <span class="sourceLineNo">039</span>public abstract class AbstractFileDataSource implements DataSource {<a name="line.39"></a>
-<span class="sourceLineNo">040</span>  <a name="line.40"></a>
-<span class="sourceLineNo">041</span>  /** The Constant ZERO. */<a name="line.41"></a>
-<span class="sourceLineNo">042</span>  private static final long ZERO = 0L;<a name="line.42"></a>
+<span class="sourceLineNo">040</span><a name="line.40"></a>
+<span class="sourceLineNo">041</span>  /** The constant indicating the max file size was not initialized. */<a name="line.41"></a>
+<span class="sourceLineNo">042</span>  private static final long EMPTY_SIZE = 0L;<a name="line.42"></a>
 <span class="sourceLineNo">043</span><a name="line.43"></a>
 <span class="sourceLineNo">044</span>  /** The data source. */<a name="line.44"></a>
 <span class="sourceLineNo">045</span>  private final transient URI dataSource;<a name="line.45"></a>
@@ -81,8 +81,8 @@
 <span class="sourceLineNo">073</span><a name="line.73"></a>
 <span class="sourceLineNo">074</span>    if (theUri != null) {<a name="line.74"></a>
 <span class="sourceLineNo">075</span>      final String rawUri = theUri;<a name="line.75"></a>
-<span class="sourceLineNo">076</span>      final int colonIdx = rawUri.indexOf(':'); //NOPMD<a name="line.76"></a>
-<span class="sourceLineNo">077</span>      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD<a name="line.77"></a>
+<span class="sourceLineNo">076</span>      final int colonIdx = rawUri.indexOf(':'); <a name="line.76"></a>
+<span class="sourceLineNo">077</span>      final String newUri = rawUri.substring(colonIdx + 1); <a name="line.77"></a>
 <span class="sourceLineNo">078</span>      result.append(newUri);<a name="line.78"></a>
 <span class="sourceLineNo">079</span>    }<a name="line.79"></a>
 <span class="sourceLineNo">080</span><a name="line.80"></a>
@@ -110,10 +110,10 @@
 <span class="sourceLineNo">102</span>  private void setMaxFileSize() throws DataSourceException {<a name="line.102"></a>
 <span class="sourceLineNo">103</span>    try {<a name="line.103"></a>
 <span class="sourceLineNo">104</span>      final Stream&lt;String&gt; lines = getStream();<a name="line.104"></a>
-<span class="sourceLineNo">105</span>      maxFileSize = (int) lines.count(); //NOPMD<a name="line.105"></a>
-<span class="sourceLineNo">106</span>      lines.close(); //NOPMD<a name="line.106"></a>
+<span class="sourceLineNo">105</span>      maxFileSize = (int) lines.count(); <a name="line.105"></a>
+<span class="sourceLineNo">106</span>      lines.close(); <a name="line.106"></a>
 <span class="sourceLineNo">107</span>    } catch (IOException exception) {<a name="line.107"></a>
-<span class="sourceLineNo">108</span>      throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD<a name="line.108"></a>
+<span class="sourceLineNo">108</span>      throw new DataSourceException("IO Exception: " + exception.toString(), exception); <a name="line.108"></a>
 <span class="sourceLineNo">109</span>    } catch (NoSuchElementException exception) {<a name="line.109"></a>
 <span class="sourceLineNo">110</span>      throw new DataSourceException("Given record does not exist.", exception);<a name="line.110"></a>
 <span class="sourceLineNo">111</span>    }<a name="line.111"></a>
@@ -150,10 +150,10 @@
 <span class="sourceLineNo">142</span>   */<a name="line.142"></a>
 <span class="sourceLineNo">143</span>  @Override<a name="line.143"></a>
 <span class="sourceLineNo">144</span>  public long getMaxSize() throws DataSourceException {<a name="line.144"></a>
-<span class="sourceLineNo">145</span>    if (maxFileSize == ZERO) {<a name="line.145"></a>
+<span class="sourceLineNo">145</span>    if (maxFileSize == EMPTY_SIZE) {<a name="line.145"></a>
 <span class="sourceLineNo">146</span>      setMaxFileSize();<a name="line.146"></a>
 <span class="sourceLineNo">147</span>    }<a name="line.147"></a>
-<span class="sourceLineNo">148</span>    <a name="line.148"></a>
+<span class="sourceLineNo">148</span><a name="line.148"></a>
 <span class="sourceLineNo">149</span>    return maxFileSize;<a name="line.149"></a>
 <span class="sourceLineNo">150</span>  }<a name="line.150"></a>
 <span class="sourceLineNo">151</span>}<a name="line.151"></a>

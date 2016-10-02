@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.exception.DataSourceException
-	c170 [label=<<table title="net.ljcomputing.randy.exception.DataSourceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataSourceException.html">
+	c240 [label=<<table title="net.ljcomputing.randy.exception.DataSourceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataSourceException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataSourceException </td></tr>
 		</table></td></tr>

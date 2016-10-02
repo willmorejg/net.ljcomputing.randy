@@ -1,4 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="15,11,99,53"/>
-<area shape="rect" id="node1" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,6,110,58"/>
+<area shape="rect" id="node1_0" href="./RecordBasedDataSource.html" title="net.ljcomputing.randy.data.RecordBasedDataSource" alt="" coords="15,113,174,154"/>
+<area shape="rect" id="node1" href="./RecordBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,107,185,159"/>
+<area shape="rect" id="node2_1" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="53,11,137,53"/>
+<area shape="rect" id="node2" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="42,6,147,58"/>
+<area shape="rect" id="node3_2" href="./DataSourceFactory.html" title="net.ljcomputing.randy.data.DataSourceFactory" alt="" coords="182,19,306,45"/>
+<area shape="rect" id="node3" href="./DataSourceFactory.html" title="&lt;TABLE&gt;" alt="" coords="171,8,317,56"/>
 </map>

@@ -1,8 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../data/DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="15,209,145,263"/>
-<area shape="rect" id="node1" href="../data/DataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,203,155,269"/>
-<area shape="rect" id="node2_1" href="./BaseGenerator.html" title="net.ljcomputing.randy.generator.BaseGenerator" alt="" coords="29,118,131,143"/>
-<area shape="rect" id="node2" href="./BaseGenerator.html" title="&lt;TABLE&gt;" alt="" coords="19,107,141,155"/>
-<area shape="rect" id="node3_2" href="./Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="40,11,120,53"/>
-<area shape="rect" id="node3" href="./Generator.html" title="&lt;TABLE&gt;" alt="" coords="29,6,131,58"/>
+<area shape="rect" id="node1_0" href="./BaseGenerator.html" title="net.ljcomputing.randy.generator.BaseGenerator" alt="" coords="24,113,125,138"/>
+<area shape="rect" id="node1" href="./BaseGenerator.html" title="&lt;TABLE&gt;" alt="" coords="13,101,136,149"/>
+<area shape="rect" id="node2_1" href="./AbstractGenerator.html" title="net.ljcomputing.randy.generator.AbstractGenerator" alt="" coords="16,17,133,42"/>
+<area shape="rect" id="node2" href="./AbstractGenerator.html" title="&lt;TABLE&gt;" alt="" coords="5,5,144,53"/>
 </map>

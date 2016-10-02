@@ -1,8 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../randomizer/AbstractRandomizer.html" title="net.ljcomputing.randy.randomizer.AbstractRandomizer" alt="" coords="16,11,173,50"/>
-<area shape="rect" id="node1" href="../randomizer/AbstractRandomizer.html" title="&lt;TABLE&gt;" alt="" coords="5,6,184,55"/>
-<area shape="rect" id="node3_1" href="./Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="55,110,135,151"/>
-<area shape="rect" id="node3" href="./Generator.html" title="&lt;TABLE&gt;" alt="" coords="44,105,145,157"/>
-<area shape="rect" id="node2_2" href="./BaseGenerator.html" title="net.ljcomputing.randy.generator.BaseGenerator" alt="" coords="44,217,145,242"/>
-<area shape="rect" id="node2" href="./BaseGenerator.html" title="&lt;TABLE&gt;" alt="" coords="33,205,156,253"/>
+<area shape="rect" id="node1_0" href="../data/DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="30,307,159,362"/>
+<area shape="rect" id="node1" href="../data/DataSource.html" title="&lt;TABLE&gt;" alt="" coords="19,302,170,367"/>
+<area shape="rect" id="node2_1" href="../randomizer/Randomizer.html" title="net.ljcomputing.randy.randomizer.Randomizer" alt="" coords="16,11,173,50"/>
+<area shape="rect" id="node2" href="../randomizer/Randomizer.html" title="&lt;TABLE&gt;" alt="" coords="5,6,184,55"/>
+<area shape="rect" id="node4_2" href="./Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="55,110,135,151"/>
+<area shape="rect" id="node4" href="./Generator.html" title="&lt;TABLE&gt;" alt="" coords="44,105,145,157"/>
+<area shape="rect" id="node3_3" href="./AbstractGenerator.html" title="net.ljcomputing.randy.generator.AbstractGenerator" alt="" coords="89,217,207,242"/>
+<area shape="rect" id="node3" href="./AbstractGenerator.html" title="&lt;TABLE&gt;" alt="" coords="79,205,217,253"/>
 </map>

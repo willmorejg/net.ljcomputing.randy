@@ -9,18 +9,18 @@ digraph G {
 	node [fontname="Helvetica",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// net.ljcomputing.randy.randomizer.Randomizer
+	c57 [label=<<table title="net.ljcomputing.randy.randomizer.Randomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Randomizer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Randomizer </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Randomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.randomizer.UsStatesRamdomizer
-	c47 [label=<<table title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsStatesRamdomizer.html">
+	c58 [label=<<table title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsStatesRamdomizer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsStatesRamdomizer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsStatesRamdomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.randy.randomizer.AbstractRandomizer
-	c48 [label=<<table title="net.ljcomputing.randy.randomizer.AbstractRandomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractRandomizer.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractRandomizer </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./AbstractRandomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 

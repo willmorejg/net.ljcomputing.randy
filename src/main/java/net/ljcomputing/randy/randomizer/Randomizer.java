@@ -35,7 +35,7 @@ import net.ljcomputing.randy.generator.Generator;
  * classes to focus on the actual implementation of returning random data 
  * and loose coupling.</p>
  * 
- * <p>{@link net.ljcomputing.randy.data.DataSourceType} 
+ * <p>{@link net.ljcomputing.randy.data.DataSourceFactory} 
  * returns the actual data source implementation based upon the URI provided.</p>
  * 
  * @author James G. Willmore

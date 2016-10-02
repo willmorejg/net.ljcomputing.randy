@@ -25,6 +25,9 @@ import net.ljcomputing.randy.data.file.FileDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
 /**
+ * Data source factory - determines the appropriate data source 
+ * implementation based upon the URI of the data source.
+ * 
  * @author James G. Willmore
  *
  */
