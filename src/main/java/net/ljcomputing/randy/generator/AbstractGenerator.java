@@ -28,7 +28,7 @@ import net.ljcomputing.randy.exception.GeneratorException;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractGenerator implements Generator {
+abstract class AbstractGenerator implements Generator {
 
   /** The random number generator. */
   private final transient Random rand = new Random();
@@ -41,7 +41,7 @@ public abstract class AbstractGenerator implements Generator {
    *
    * @param bufferSize the buffer size
    */
-  public AbstractGenerator(final int bufferSize) {
+  AbstractGenerator(final int bufferSize) {
     buffer = new String[bufferSize];
   }
 

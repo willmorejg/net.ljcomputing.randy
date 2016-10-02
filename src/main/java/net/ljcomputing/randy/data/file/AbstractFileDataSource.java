@@ -36,13 +36,13 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractFileDataSource implements DataSource {
+abstract class AbstractFileDataSource implements DataSource {
 
   /** The constant indicating the max file size was not initialized. */
   private static final long EMPTY_SIZE = 0L;
 
   /** The data source. */
-  private final transient URI dataSource;
+  private final transient URI uri;
 
   /** The max file size. */
   private transient long maxFileSize;
@@ -53,9 +53,9 @@ public abstract class AbstractFileDataSource implements DataSource {
    * @param uri the uri
    * @throws DataSourceException the data source exception
    */
-  public AbstractFileDataSource(final String uri) throws DataSourceException {
+  AbstractFileDataSource(final String uri) throws DataSourceException {
     try {
-      this.dataSource = new URI(uri);
+      this.uri = new URI(uri);
     } catch (URISyntaxException exception) {
       throw new DataSourceException("Invalid URL.", exception);
     }
@@ -89,7 +89,7 @@ public abstract class AbstractFileDataSource implements DataSource {
    * @throws DataSourceException the data source exception
    */
   protected Stream<String> getStream() throws IOException, DataSourceException {
-    final URI uri = getDataSource();
+    final URI uri = toUri();
     final Path path = Paths.get(uri);
     return Files.lines(path);
   }
@@ -118,11 +118,11 @@ public abstract class AbstractFileDataSource implements DataSource {
   public abstract String read(int record) throws DataSourceException;
 
   /**
-   * @see net.ljcomputing.randy.data.DataSource#getDataSource()
+   * @see net.ljcomputing.randy.data.DataSource#toUri()
    */
   @Override
-  public URI getDataSource() {
-    return dataSource;
+  public URI toUri() {
+    return uri;
   }
 
   /**
@@ -131,7 +131,7 @@ public abstract class AbstractFileDataSource implements DataSource {
   @Override
   public URL toUrl() throws DataSourceException {
     try {
-      return dataSource.toURL();
+      return uri.toURL();
     } catch (MalformedURLException exception) {
       throw new DataSourceException("URL of data source is invalid.", exception);
     }

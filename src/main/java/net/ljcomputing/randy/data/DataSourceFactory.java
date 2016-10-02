@@ -34,8 +34,11 @@ import net.ljcomputing.randy.exception.DataSourceException;
  */
 public final class DataSourceFactory {
 
+  /** The instance. */
+  private static DataSourceFactory instance = new DataSourceFactory();
+
   /** The Constant MAP. */
-  private static final Map<String, Class<? extends DataSource>> MAP = 
+  private static final Map<String, Class<? extends DataSource>> MAPPINGS = 
       new ConcurrentHashMap<String, Class<? extends DataSource>>();
 
   /**
@@ -43,13 +46,25 @@ public final class DataSourceFactory {
    */
   private DataSourceFactory() {
   }
-  
+
+  /**
+   * Gets the single instance of DataSourceFactory.
+   *
+   * @return single instance of DataSourceFactory
+   */
+  public static DataSourceFactory getInstance() {
+    initMappings();
+    return instance;
+  }
+
   /**
    * Instantiates a new data source factory.
    */
-  private static void init() {
-    MAP.put("file", FileDataSource.class);
-    MAP.put("csv", CsvDataSource.class);
+  private static void initMappings() {
+    if (MAPPINGS.isEmpty()) {
+      MAPPINGS.put("file", FileDataSource.class);
+      MAPPINGS.put("csv", CsvDataSource.class);
+    }
   }
 
   /**
@@ -60,13 +75,13 @@ public final class DataSourceFactory {
    */
   private static Class<? extends DataSource> findMapping(final String uri) { //NOPMD
     Class<? extends DataSource> dataSource = null; //NOPMD
-    
+
     if (uri != null) {
       final int index = uri.indexOf(':');
       final String theScheme = uri.substring(0, index); //NOPMD
-      for (final String scheme : MAP.keySet()) {
+      for (final String scheme : MAPPINGS.keySet()) {
         if (scheme.equals(theScheme)) { //NOPMD
-          dataSource = MAP.get(scheme);
+          dataSource = MAPPINGS.get(scheme);
           break;
         }
       }
@@ -82,24 +97,21 @@ public final class DataSourceFactory {
    * @return the data source
    * @throws DataSourceException the data source exception
    */
-  public static DataSource getDataSource(final String uri) throws DataSourceException {
-    if (MAP.isEmpty()) {
-      init();
-    }
-    
+  public DataSource getDataSource(final String uri) throws DataSourceException {
     final Class<? extends DataSource> dsImpl = findMapping(uri);
+    
+    if (dsImpl == null) {
+      throw new DataSourceException("Data source implementation [uri = " + uri + "] not found");
+    }
 
     try {
-      if (dsImpl != null) {
-        Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
-        return constructor.newInstance(uri); //NOPMD
-      }
-
-      throw new DataSourceException("Data source implementation [uri = " + uri + "] not found");
+      Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
+      return constructor.newInstance(uri); //NOPMD
     } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
         | InvocationTargetException | NoSuchMethodException | SecurityException exception) {
-      throw new DataSourceException("Exception encountered instaniating data source implementation "
-          + "[uri = " + uri + "]", exception);
+      throw new DataSourceException(
+          "Exception encountered instaniating data source implementation " + "[uri = " + uri + "]",
+          exception);
     }
   }
 }

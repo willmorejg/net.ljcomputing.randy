@@ -40,11 +40,11 @@ public interface DataSource {
   String read(int record) throws DataSourceException;
 
   /**
-   * Gets the data source.
+   * Gets the data source URI.
    *
    * @return the data source
    */
-  URI getDataSource();
+  URI toUri();
   
   /**
    * Gets the data source URL.
