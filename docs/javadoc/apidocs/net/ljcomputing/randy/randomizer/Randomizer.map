@@ -1,10 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Randomizer.html" title="net.ljcomputing.randy.randomizer.Randomizer" alt="" coords="264,17,349,42"/>
-<area shape="rect" id="node1" href="./Randomizer.html" title="&lt;TABLE&gt;" alt="" coords="253,5,360,53"/>
-<area shape="rect" id="node2_1" href="./impl/UsStatesRamdomizerImpl.html" title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" alt="" coords="15,115,193,154"/>
-<area shape="rect" id="node2" href="./impl/UsStatesRamdomizerImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,110,203,159"/>
-<area shape="rect" id="node3_2" href="../ApplicationProperties.html" title="net.ljcomputing.randy.ApplicationProperties" alt="" coords="239,115,375,154"/>
-<area shape="rect" id="node3" href="../ApplicationProperties.html" title="&lt;TABLE&gt;" alt="" coords="228,110,385,159"/>
-<area shape="rect" id="node4_3" href="../generator/Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="420,107,569,162"/>
-<area shape="rect" id="node4" href="../generator/Generator.html" title="&lt;TABLE&gt;" alt="" coords="409,102,580,167"/>
+<area shape="rect" id="node1_0" href="./Randomizer.html" title="net.ljcomputing.randy.randomizer.Randomizer" alt="" coords="385,17,471,42"/>
+<area shape="rect" id="node1" href="./Randomizer.html" title="&lt;TABLE&gt;" alt="" coords="375,5,481,53"/>
+<area shape="rect" id="node2_1" href="./impl/GenderRandomizerImpl.html" title="net.ljcomputing.randy.randomizer.impl.GenderRandomizerImpl" alt="" coords="15,115,193,154"/>
+<area shape="rect" id="node2" href="./impl/GenderRandomizerImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,110,203,159"/>
+<area shape="rect" id="node3_2" href="./impl/UsStatesRamdomizerImpl.html" title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" alt="" coords="238,115,415,154"/>
+<area shape="rect" id="node3" href="./impl/UsStatesRamdomizerImpl.html" title="&lt;TABLE&gt;" alt="" coords="227,110,426,159"/>
+<area shape="rect" id="node4_3" href="../ApplicationProperties.html" title="net.ljcomputing.randy.ApplicationProperties" alt="" coords="461,115,597,154"/>
+<area shape="rect" id="node4" href="../ApplicationProperties.html" title="&lt;TABLE&gt;" alt="" coords="451,110,608,159"/>
+<area shape="rect" id="node5_4" href="../generator/Generator.html" title="net.ljcomputing.randy.generator.Generator" alt="" coords="643,107,792,162"/>
+<area shape="rect" id="node5" href="../generator/Generator.html" title="&lt;TABLE&gt;" alt="" coords="632,102,803,167"/>
 </map>

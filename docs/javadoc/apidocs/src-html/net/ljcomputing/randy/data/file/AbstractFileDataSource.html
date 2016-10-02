@@ -44,13 +44,13 @@
 <span class="sourceLineNo">036</span> * @author James G. Willmore<a name="line.36"></a>
 <span class="sourceLineNo">037</span> *<a name="line.37"></a>
 <span class="sourceLineNo">038</span> */<a name="line.38"></a>
-<span class="sourceLineNo">039</span>public abstract class AbstractFileDataSource implements DataSource {<a name="line.39"></a>
+<span class="sourceLineNo">039</span>abstract class AbstractFileDataSource implements DataSource {<a name="line.39"></a>
 <span class="sourceLineNo">040</span><a name="line.40"></a>
 <span class="sourceLineNo">041</span>  /** The constant indicating the max file size was not initialized. */<a name="line.41"></a>
 <span class="sourceLineNo">042</span>  private static final long EMPTY_SIZE = 0L;<a name="line.42"></a>
 <span class="sourceLineNo">043</span><a name="line.43"></a>
 <span class="sourceLineNo">044</span>  /** The data source. */<a name="line.44"></a>
-<span class="sourceLineNo">045</span>  private final transient URI dataSource;<a name="line.45"></a>
+<span class="sourceLineNo">045</span>  private final transient URI uri;<a name="line.45"></a>
 <span class="sourceLineNo">046</span><a name="line.46"></a>
 <span class="sourceLineNo">047</span>  /** The max file size. */<a name="line.47"></a>
 <span class="sourceLineNo">048</span>  private transient long maxFileSize;<a name="line.48"></a>
@@ -61,9 +61,9 @@
 <span class="sourceLineNo">053</span>   * @param uri the uri<a name="line.53"></a>
 <span class="sourceLineNo">054</span>   * @throws DataSourceException the data source exception<a name="line.54"></a>
 <span class="sourceLineNo">055</span>   */<a name="line.55"></a>
-<span class="sourceLineNo">056</span>  public AbstractFileDataSource(final String uri) throws DataSourceException {<a name="line.56"></a>
+<span class="sourceLineNo">056</span>  AbstractFileDataSource(final String uri) throws DataSourceException {<a name="line.56"></a>
 <span class="sourceLineNo">057</span>    try {<a name="line.57"></a>
-<span class="sourceLineNo">058</span>      this.dataSource = new URI(uri);<a name="line.58"></a>
+<span class="sourceLineNo">058</span>      this.uri = new URI(uri);<a name="line.58"></a>
 <span class="sourceLineNo">059</span>    } catch (URISyntaxException exception) {<a name="line.59"></a>
 <span class="sourceLineNo">060</span>      throw new DataSourceException("Invalid URL.", exception);<a name="line.60"></a>
 <span class="sourceLineNo">061</span>    }<a name="line.61"></a>
@@ -81,8 +81,8 @@
 <span class="sourceLineNo">073</span><a name="line.73"></a>
 <span class="sourceLineNo">074</span>    if (theUri != null) {<a name="line.74"></a>
 <span class="sourceLineNo">075</span>      final String rawUri = theUri;<a name="line.75"></a>
-<span class="sourceLineNo">076</span>      final int colonIdx = rawUri.indexOf(':'); <a name="line.76"></a>
-<span class="sourceLineNo">077</span>      final String newUri = rawUri.substring(colonIdx + 1); <a name="line.77"></a>
+<span class="sourceLineNo">076</span>      final int colonIdx = rawUri.indexOf(':'); //NOPMD<a name="line.76"></a>
+<span class="sourceLineNo">077</span>      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD<a name="line.77"></a>
 <span class="sourceLineNo">078</span>      result.append(newUri);<a name="line.78"></a>
 <span class="sourceLineNo">079</span>    }<a name="line.79"></a>
 <span class="sourceLineNo">080</span><a name="line.80"></a>
@@ -97,7 +97,7 @@
 <span class="sourceLineNo">089</span>   * @throws DataSourceException the data source exception<a name="line.89"></a>
 <span class="sourceLineNo">090</span>   */<a name="line.90"></a>
 <span class="sourceLineNo">091</span>  protected Stream&lt;String&gt; getStream() throws IOException, DataSourceException {<a name="line.91"></a>
-<span class="sourceLineNo">092</span>    final URI uri = getDataSource();<a name="line.92"></a>
+<span class="sourceLineNo">092</span>    final URI uri = toUri();<a name="line.92"></a>
 <span class="sourceLineNo">093</span>    final Path path = Paths.get(uri);<a name="line.93"></a>
 <span class="sourceLineNo">094</span>    return Files.lines(path);<a name="line.94"></a>
 <span class="sourceLineNo">095</span>  }<a name="line.95"></a>
@@ -110,10 +110,10 @@
 <span class="sourceLineNo">102</span>  private void setMaxFileSize() throws DataSourceException {<a name="line.102"></a>
 <span class="sourceLineNo">103</span>    try {<a name="line.103"></a>
 <span class="sourceLineNo">104</span>      final Stream&lt;String&gt; lines = getStream();<a name="line.104"></a>
-<span class="sourceLineNo">105</span>      maxFileSize = (int) lines.count(); <a name="line.105"></a>
-<span class="sourceLineNo">106</span>      lines.close(); <a name="line.106"></a>
+<span class="sourceLineNo">105</span>      maxFileSize = (int) lines.count(); //NOPMD<a name="line.105"></a>
+<span class="sourceLineNo">106</span>      lines.close(); //NOPMD<a name="line.106"></a>
 <span class="sourceLineNo">107</span>    } catch (IOException exception) {<a name="line.107"></a>
-<span class="sourceLineNo">108</span>      throw new DataSourceException("IO Exception: " + exception.toString(), exception); <a name="line.108"></a>
+<span class="sourceLineNo">108</span>      throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD<a name="line.108"></a>
 <span class="sourceLineNo">109</span>    } catch (NoSuchElementException exception) {<a name="line.109"></a>
 <span class="sourceLineNo">110</span>      throw new DataSourceException("Given record does not exist.", exception);<a name="line.110"></a>
 <span class="sourceLineNo">111</span>    }<a name="line.111"></a>
@@ -126,11 +126,11 @@
 <span class="sourceLineNo">118</span>  public abstract String read(int record) throws DataSourceException;<a name="line.118"></a>
 <span class="sourceLineNo">119</span><a name="line.119"></a>
 <span class="sourceLineNo">120</span>  /**<a name="line.120"></a>
-<span class="sourceLineNo">121</span>   * @see net.ljcomputing.randy.data.DataSource#getDataSource()<a name="line.121"></a>
+<span class="sourceLineNo">121</span>   * @see net.ljcomputing.randy.data.DataSource#toUri()<a name="line.121"></a>
 <span class="sourceLineNo">122</span>   */<a name="line.122"></a>
 <span class="sourceLineNo">123</span>  @Override<a name="line.123"></a>
-<span class="sourceLineNo">124</span>  public URI getDataSource() {<a name="line.124"></a>
-<span class="sourceLineNo">125</span>    return dataSource;<a name="line.125"></a>
+<span class="sourceLineNo">124</span>  public URI toUri() {<a name="line.124"></a>
+<span class="sourceLineNo">125</span>    return uri;<a name="line.125"></a>
 <span class="sourceLineNo">126</span>  }<a name="line.126"></a>
 <span class="sourceLineNo">127</span><a name="line.127"></a>
 <span class="sourceLineNo">128</span>  /**<a name="line.128"></a>
@@ -139,7 +139,7 @@
 <span class="sourceLineNo">131</span>  @Override<a name="line.131"></a>
 <span class="sourceLineNo">132</span>  public URL toUrl() throws DataSourceException {<a name="line.132"></a>
 <span class="sourceLineNo">133</span>    try {<a name="line.133"></a>
-<span class="sourceLineNo">134</span>      return dataSource.toURL();<a name="line.134"></a>
+<span class="sourceLineNo">134</span>      return uri.toURL();<a name="line.134"></a>
 <span class="sourceLineNo">135</span>    } catch (MalformedURLException exception) {<a name="line.135"></a>
 <span class="sourceLineNo">136</span>      throw new DataSourceException("URL of data source is invalid.", exception);<a name="line.136"></a>
 <span class="sourceLineNo">137</span>    }<a name="line.137"></a>

@@ -1,5 +1,6 @@
 net.ljcomputing.randy
 net.ljcomputing.randy.data
+net.ljcomputing.randy.data.enumeration
 net.ljcomputing.randy.data.file
 net.ljcomputing.randy.exception
 net.ljcomputing.randy.generator

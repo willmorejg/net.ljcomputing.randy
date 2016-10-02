@@ -10,38 +10,47 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.randomizer.Randomizer
-	c322 [label=<<table title="net.ljcomputing.randy.randomizer.Randomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Randomizer.html">
+	c547 [label=<<table title="net.ljcomputing.randy.randomizer.Randomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Randomizer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Randomizer </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Randomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	// net.ljcomputing.randy.randomizer.impl.GenderRandomizerImpl
+	c549 [label=<<table title="net.ljcomputing.randy.randomizer.impl.GenderRandomizerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/GenderRandomizerImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> GenderRandomizerImpl </td></tr>
+<tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.randomizer.impl </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./impl/GenderRandomizerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl
-	c324 [label=<<table title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsStatesRamdomizerImpl.html">
+	c550 [label=<<table title="net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsStatesRamdomizerImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsStatesRamdomizerImpl </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.randomizer.impl </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/UsStatesRamdomizerImpl.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.ApplicationProperties
-	c325 [label=<<table title="net.ljcomputing.randy.ApplicationProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ApplicationProperties.html">
+	c551 [label=<<table title="net.ljcomputing.randy.ApplicationProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ApplicationProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ApplicationProperties </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../ApplicationProperties.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.generator.Generator
-	c328 [label=<<table title="net.ljcomputing.randy.generator.Generator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/Generator.html">
+	c554 [label=<<table title="net.ljcomputing.randy.generator.Generator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../generator/Generator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Generator </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.generator </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../generator/Generator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+	//net.ljcomputing.randy.randomizer.impl.GenderRandomizerImpl extends net.ljcomputing.randy.randomizer.Randomizer
+	c547:p -> c549:p [dir=back,arrowtail=empty];
 	//net.ljcomputing.randy.randomizer.impl.UsStatesRamdomizerImpl extends net.ljcomputing.randy.randomizer.Randomizer
-	c322:p -> c324:p [dir=back,arrowtail=empty];
+	c547:p -> c550:p [dir=back,arrowtail=empty];
 	// net.ljcomputing.randy.randomizer.Randomizer NAVASSOC net.ljcomputing.randy.ApplicationProperties
-	c322:p -> c325:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c547:p -> c551:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.randy.randomizer.Randomizer NAVASSOC net.ljcomputing.randy.generator.Generator
-	c322:p -> c328:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c547:p -> c554:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 }
 

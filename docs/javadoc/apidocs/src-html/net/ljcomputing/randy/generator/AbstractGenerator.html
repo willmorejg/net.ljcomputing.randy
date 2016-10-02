@@ -36,7 +36,7 @@
 <span class="sourceLineNo">028</span> * @author James G. Willmore<a name="line.28"></a>
 <span class="sourceLineNo">029</span> *<a name="line.29"></a>
 <span class="sourceLineNo">030</span> */<a name="line.30"></a>
-<span class="sourceLineNo">031</span>public abstract class AbstractGenerator implements Generator {<a name="line.31"></a>
+<span class="sourceLineNo">031</span>abstract class AbstractGenerator implements Generator {<a name="line.31"></a>
 <span class="sourceLineNo">032</span><a name="line.32"></a>
 <span class="sourceLineNo">033</span>  /** The random number generator. */<a name="line.33"></a>
 <span class="sourceLineNo">034</span>  private final transient Random rand = new Random();<a name="line.34"></a>
@@ -49,7 +49,7 @@
 <span class="sourceLineNo">041</span>   *<a name="line.41"></a>
 <span class="sourceLineNo">042</span>   * @param bufferSize the buffer size<a name="line.42"></a>
 <span class="sourceLineNo">043</span>   */<a name="line.43"></a>
-<span class="sourceLineNo">044</span>  public AbstractGenerator(final int bufferSize) {<a name="line.44"></a>
+<span class="sourceLineNo">044</span>  AbstractGenerator(final int bufferSize) {<a name="line.44"></a>
 <span class="sourceLineNo">045</span>    buffer = new String[bufferSize];<a name="line.45"></a>
 <span class="sourceLineNo">046</span>  }<a name="line.46"></a>
 <span class="sourceLineNo">047</span><a name="line.47"></a>
@@ -63,7 +63,7 @@
 <span class="sourceLineNo">055</span>  private static int getMaxInt(final DataSource dataSource) throws DataSourceException {<a name="line.55"></a>
 <span class="sourceLineNo">056</span>    final long maxSize = dataSource.getMaxSize();<a name="line.56"></a>
 <span class="sourceLineNo">057</span>    final Long maxLong = Long.valueOf(maxSize);<a name="line.57"></a>
-<span class="sourceLineNo">058</span>    return maxLong.intValue() - 1;<a name="line.58"></a>
+<span class="sourceLineNo">058</span>    return maxLong.intValue() - 1; //NOPMD<a name="line.58"></a>
 <span class="sourceLineNo">059</span>  }<a name="line.59"></a>
 <span class="sourceLineNo">060</span><a name="line.60"></a>
 <span class="sourceLineNo">061</span>  /**<a name="line.61"></a>

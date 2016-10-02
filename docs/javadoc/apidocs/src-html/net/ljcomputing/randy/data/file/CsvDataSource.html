@@ -90,8 +90,8 @@
 <span class="sourceLineNo">082</span>  private String readRecordValue(final int record) throws DataSourceException {<a name="line.82"></a>
 <span class="sourceLineNo">083</span>    try {<a name="line.83"></a>
 <span class="sourceLineNo">084</span>      final Stream&lt;String&gt; lines = getStream();<a name="line.84"></a>
-<span class="sourceLineNo">085</span>      final String line = lines.skip(record).findFirst().get(); <a name="line.85"></a>
-<span class="sourceLineNo">086</span>      lines.close(); <a name="line.86"></a>
+<span class="sourceLineNo">085</span>      final String line = lines.skip(record).findFirst().get(); //NOPMD<a name="line.85"></a>
+<span class="sourceLineNo">086</span>      lines.close(); //NOPMD<a name="line.86"></a>
 <span class="sourceLineNo">087</span>      return line;<a name="line.87"></a>
 <span class="sourceLineNo">088</span>    } catch (IOException exception) {<a name="line.88"></a>
 <span class="sourceLineNo">089</span>      throw new DataSourceException("IO Exception", exception);<a name="line.89"></a>
@@ -109,8 +109,8 @@
 <span class="sourceLineNo">101</span>    @SuppressWarnings("resource")<a name="line.101"></a>
 <span class="sourceLineNo">102</span>    final CSVParser csvParser = new CSVParser(reader, CSVFormat.RFC4180);<a name="line.102"></a>
 <span class="sourceLineNo">103</span>    final List&lt;CSVRecord&gt; csvRecords = csvParser.getRecords();<a name="line.103"></a>
-<span class="sourceLineNo">104</span>    final CSVRecord csvRecord  = csvRecords.get(0); <a name="line.104"></a>
-<span class="sourceLineNo">105</span>    return csvRecord.get(getRecordPosition()); <a name="line.105"></a>
+<span class="sourceLineNo">104</span>    final CSVRecord csvRecord  = csvRecords.get(0); //NOPMD<a name="line.104"></a>
+<span class="sourceLineNo">105</span>    return csvRecord.get(getRecordPosition()); //NOPMD<a name="line.105"></a>
 <span class="sourceLineNo">106</span>  }<a name="line.106"></a>
 <span class="sourceLineNo">107</span><a name="line.107"></a>
 <span class="sourceLineNo">108</span>  /**<a name="line.108"></a>

@@ -1,6 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./Randomizer.html" title="net.ljcomputing.randy.randomizer.Randomizer" alt="" coords="16,19,101,45"/>
-<area shape="rect" id="node1" href="./Randomizer.html" title="&lt;TABLE&gt;" alt="" coords="5,8,112,56"/>
-<area shape="rect" id="node2_1" href="./UsStatesRamdomizer.html" title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" alt="" coords="147,11,285,53"/>
-<area shape="rect" id="node2" href="./UsStatesRamdomizer.html" title="&lt;TABLE&gt;" alt="" coords="137,6,295,58"/>
+<area shape="rect" id="node1_0" href="./GenderRandomizer.html" title="net.ljcomputing.randy.randomizer.GenderRandomizer" alt="" coords="15,11,142,53"/>
+<area shape="rect" id="node1" href="./GenderRandomizer.html" title="&lt;TABLE&gt;" alt="" coords="5,6,153,58"/>
+<area shape="rect" id="node2_1" href="./Randomizer.html" title="net.ljcomputing.randy.randomizer.Randomizer" alt="" coords="188,19,273,45"/>
+<area shape="rect" id="node2" href="./Randomizer.html" title="&lt;TABLE&gt;" alt="" coords="177,8,284,56"/>
+<area shape="rect" id="node3_2" href="./UsStatesRamdomizer.html" title="net.ljcomputing.randy.randomizer.UsStatesRamdomizer" alt="" coords="319,11,457,53"/>
+<area shape="rect" id="node3" href="./UsStatesRamdomizer.html" title="&lt;TABLE&gt;" alt="" coords="309,6,467,58"/>
 </map>
