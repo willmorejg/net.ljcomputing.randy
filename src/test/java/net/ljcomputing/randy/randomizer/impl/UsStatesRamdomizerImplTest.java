@@ -19,6 +19,7 @@ package net.ljcomputing.randy.randomizer.impl;
 import org.junit.Test;
 
 import net.ljcomputing.randy.exception.RandomizerException;
+import net.ljcomputing.randy.randomizer.GenderRandomizer;
 import net.ljcomputing.randy.randomizer.UsStatesRamdomizer;
 
 /**
@@ -39,6 +40,12 @@ public class UsStatesRamdomizerImplTest { //NOPMD
 
       for (int s = 0; s < 10; s++) {
         System.out.println(rand.state()); //NOPMD
+      }
+      
+      final GenderRandomizer gen = new GenderRandomizerImpl();
+
+      for (int s = 0; s < 10; s++) {
+        System.out.println(gen.gender()); //NOPMD
       }
     } catch (RandomizerException exception) {
       exception.printStackTrace(); //NOPMD

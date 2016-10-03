@@ -16,9 +16,9 @@
 
 package net.ljcomputing.randy.data.enumeration;
 
-import java.net.URI;
 import java.net.URL;
 
+import net.ljcomputing.randy.data.AbstractDataSource;
 import net.ljcomputing.randy.data.EnumerationBasedDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
@@ -28,21 +28,36 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-@SuppressWarnings("ucd")
-public abstract class AbstractEnumerationDataSource implements EnumerationBasedDataSource { //NOPMD
+public class EnumerationDataSourceImpl extends AbstractDataSource
+    implements EnumerationBasedDataSource {
+
+  /** The enumeration. */
+  private Class<?> enumeration;
+
+  /**
+   * Instantiates a new base enumeration data source.
+   *
+   * @param uri the uri
+   * @throws DataSourceException the data source exception
+   */
+  public EnumerationDataSourceImpl(final String uri)
+      throws DataSourceException {
+    super(uri);
+    final String classname = convertUri(uri);
+    
+    try {
+      this.enumeration = Class.forName(classname);
+    } catch (ClassNotFoundException exception) {
+      throw new DataSourceException("Exception encountered instaniating data source", exception);
+    }
+  }
 
   /**
    * @see net.ljcomputing.randy.data.DataSource#read(int)
    */
   @Override
-  public abstract String read(final int record) throws DataSourceException;
-  
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#toUri()
-   */
-  @Override
-  public URI toUri() {
-    throw new UnsupportedOperationException("Not implemented");
+  public String read(final int record) throws DataSourceException {
+    return enumeration.getEnumConstants()[record].toString();
   }
 
   /**
@@ -57,5 +72,8 @@ public abstract class AbstractEnumerationDataSource implements EnumerationBasedD
    * @see net.ljcomputing.randy.data.DataSource#getMaxSize()
    */
   @Override
-  public abstract long getMaxSize() throws DataSourceException;
+  public long getMaxSize() throws DataSourceException {
+    // need to add 1 for random generation
+    return enumeration.getEnumConstants().length + 1;
+  }
 }

@@ -27,7 +27,7 @@ import net.ljcomputing.randy.randomizer.Randomizer;
 public class GenderRandomizerImpl extends Randomizer implements GenderRandomizer {
   
   /** The Constant PROPERTY_PREFIX. */
-  private static final String PROPERTY_PREFIX = "random.us.states";
+  private static final String PROPERTY_PREFIX = "random.gender";
   
   /**
    * Instantiates a new gender randomizer impl.

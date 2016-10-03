@@ -16,51 +16,12 @@
 
 package net.ljcomputing.randy.data.enumeration;
 
-import java.net.URI;
-import java.net.URL;
-
-import net.ljcomputing.randy.data.EnumerationBasedDataSource;
-import net.ljcomputing.randy.exception.DataSourceException;
-
 /**
  * An enumeration of genders.
  * 
  * @author James G. Willmore
  *
  */
-public enum Gender implements EnumerationBasedDataSource {
+public enum Gender {
   MALE, FEMALE;
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#read(int)
-   */
-  @Override
-  public String read(final int record) throws DataSourceException {
-    final Gender result = values()[record]; //NOPMD
-    return result.toString(); //NOPMD
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#toUri()
-   */
-  @Override
-  public URI toUri() {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#toUrl()
-   */
-  @Override
-  public URL toUrl() throws DataSourceException {
-    throw new UnsupportedOperationException("Not implemented");
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#getMaxSize()
-   */
-  @Override
-  public long getMaxSize() throws DataSourceException {
-    return values().length; //NOPMD
-  }
 }

@@ -19,7 +19,6 @@ package net.ljcomputing.randy.data.file;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -27,6 +26,7 @@ import java.nio.file.Paths;
 import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
+import net.ljcomputing.randy.data.AbstractDataSource;
 import net.ljcomputing.randy.data.DataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
@@ -36,16 +36,7 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-abstract class AbstractFileDataSource implements DataSource {
-
-  /** The constant indicating the max file size was not initialized. */
-  private static final long EMPTY_SIZE = 0L;
-
-  /** The data source. */
-  private final transient URI uri;
-
-  /** The max file size. */
-  private transient long maxFileSize;
+abstract class AbstractFileDataSource extends AbstractDataSource implements DataSource {
 
   /**
    * Instantiates a new abstract file data source.
@@ -54,11 +45,7 @@ abstract class AbstractFileDataSource implements DataSource {
    * @throws DataSourceException the data source exception
    */
   AbstractFileDataSource(final String uri) throws DataSourceException {
-    try {
-      this.uri = new URI(uri);
-    } catch (URISyntaxException exception) {
-      throw new DataSourceException("Invalid URL.", exception);
-    }
+    super(uri);
   }
 
   /**
@@ -102,7 +89,7 @@ abstract class AbstractFileDataSource implements DataSource {
   private void setMaxFileSize() throws DataSourceException {
     try {
       final Stream<String> lines = getStream();
-      maxFileSize = (int) lines.count(); //NOPMD
+      maxSize = (int) lines.count(); //NOPMD
       lines.close(); //NOPMD
     } catch (IOException exception) {
       throw new DataSourceException("IO Exception: " + exception.toString(), exception); //NOPMD
@@ -142,10 +129,10 @@ abstract class AbstractFileDataSource implements DataSource {
    */
   @Override
   public long getMaxSize() throws DataSourceException {
-    if (maxFileSize == EMPTY_SIZE) {
+    if (maxSize == EMPTY_SIZE) {
       setMaxFileSize();
     }
 
-    return maxFileSize;
+    return maxSize;
   }
 }

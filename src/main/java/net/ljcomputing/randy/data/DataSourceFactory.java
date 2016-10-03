@@ -21,6 +21,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl;
 import net.ljcomputing.randy.data.file.CsvDataSource;
 import net.ljcomputing.randy.data.file.FileDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
@@ -64,6 +65,7 @@ public final class DataSourceFactory {
     if (MAPPINGS.isEmpty()) {
       MAPPINGS.put("file", FileDataSource.class);
       MAPPINGS.put("csv", CsvDataSource.class);
+      MAPPINGS.put("enum", EnumerationDataSourceImpl.class);
     }
   }
 
@@ -89,6 +91,17 @@ public final class DataSourceFactory {
 
     return dataSource;
   }
+  
+  /**
+   * Inits the data source.
+   *
+   * @param dataSource the data source
+   */
+  private void initDataSource(final DataSource dataSource) {
+    if (dataSource instanceof RecordBasedDataSource) {
+      ((RecordBasedDataSource) dataSource).setRecordPosition(1);
+    }
+  }
 
   /**
    * Gets the data source.
@@ -106,7 +119,9 @@ public final class DataSourceFactory {
 
     try {
       Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
-      return constructor.newInstance(uri); //NOPMD
+      final DataSource dataSource = constructor.newInstance(uri); //NOPMD
+      initDataSource(dataSource);
+      return dataSource;
     } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
         | InvocationTargetException | NoSuchMethodException | SecurityException exception) {
       throw new DataSourceException(
