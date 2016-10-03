@@ -1,10 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./EnumerationBasedDataSource.html" title="net.ljcomputing.randy.data.EnumerationBasedDataSource" alt="" coords="16,113,205,154"/>
-<area shape="rect" id="node1" href="./EnumerationBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,107,216,159"/>
-<area shape="rect" id="node2_1" href="./RecordBasedDataSource.html" title="net.ljcomputing.randy.data.RecordBasedDataSource" alt="" coords="251,113,410,154"/>
-<area shape="rect" id="node2" href="./RecordBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="241,107,421,159"/>
-<area shape="rect" id="node3_2" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="178,11,262,53"/>
-<area shape="rect" id="node3" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="167,6,273,58"/>
-<area shape="rect" id="node4_3" href="./DataSourceFactory.html" title="net.ljcomputing.randy.data.DataSourceFactory" alt="" coords="307,19,431,45"/>
-<area shape="rect" id="node4" href="./DataSourceFactory.html" title="&lt;TABLE&gt;" alt="" coords="297,8,442,56"/>
+<area shape="rect" id="node1_0" href="./AbstractDataSource.html" title="net.ljcomputing.randy.data.AbstractDataSource" alt="" coords="16,121,144,146"/>
+<area shape="rect" id="node1" href="./AbstractDataSource.html" title="&lt;TABLE&gt;" alt="" coords="5,109,155,157"/>
+<area shape="rect" id="node2_1" href="./EnumerationBasedDataSource.html" title="net.ljcomputing.randy.data.EnumerationBasedDataSource" alt="" coords="189,113,379,154"/>
+<area shape="rect" id="node2" href="./EnumerationBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="179,107,389,159"/>
+<area shape="rect" id="node3_2" href="./RecordBasedDataSource.html" title="net.ljcomputing.randy.data.RecordBasedDataSource" alt="" coords="425,113,583,154"/>
+<area shape="rect" id="node3" href="./RecordBasedDataSource.html" title="&lt;TABLE&gt;" alt="" coords="414,107,594,159"/>
+<area shape="rect" id="node4_3" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="242,11,326,53"/>
+<area shape="rect" id="node4" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="231,6,337,58"/>
+<area shape="rect" id="node5_4" href="./DataSourceFactory.html" title="net.ljcomputing.randy.data.DataSourceFactory" alt="" coords="371,19,495,45"/>
+<area shape="rect" id="node5" href="./DataSourceFactory.html" title="&lt;TABLE&gt;" alt="" coords="361,8,506,56"/>
 </map>

@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./AbstractDataSource.html" title="net.ljcomputing.randy.data.AbstractDataSource" alt="" coords="141,118,269,143"/>
+<area shape="rect" id="node1" href="./AbstractDataSource.html" title="&lt;TABLE&gt;" alt="" coords="131,107,280,155"/>
+<area shape="rect" id="node3_1" href="./enumeration/EnumerationDataSourceImpl.html" title="net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl" alt="" coords="15,209,198,247"/>
+<area shape="rect" id="node3" href="./enumeration/EnumerationDataSourceImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,203,209,253"/>
+<area shape="rect" id="node4_2" href="./file/AbstractFileDataSource.html" title="net.ljcomputing.randy.data.file.AbstractFileDataSource" alt="" coords="243,209,391,247"/>
+<area shape="rect" id="node4" href="./file/AbstractFileDataSource.html" title="&lt;TABLE&gt;" alt="" coords="233,203,402,253"/>
+<area shape="rect" id="node2_3" href="./DataSource.html" title="net.ljcomputing.randy.data.DataSource" alt="" coords="219,11,303,53"/>
+<area shape="rect" id="node2" href="./DataSource.html" title="&lt;TABLE&gt;" alt="" coords="209,6,314,58"/>
+</map>

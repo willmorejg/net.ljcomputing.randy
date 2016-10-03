@@ -10,17 +10,17 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.data.enumeration.Gender
-	c25 [label=<<table title="net.ljcomputing.randy.data.enumeration.Gender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Gender.html">
+	c27 [label=<<table title="net.ljcomputing.randy.data.enumeration.Gender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Gender.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Gender </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Gender.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.randy.data.enumeration.AbstractEnumerationDataSource
-	c26 [label=<<table title="net.ljcomputing.randy.data.enumeration.AbstractEnumerationDataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractEnumerationDataSource.html">
+	// net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl
+	c28 [label=<<table title="net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EnumerationDataSourceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractEnumerationDataSource </font></td></tr>
+<tr><td align="center" balign="center"> EnumerationDataSourceImpl </td></tr>
 		</table></td></tr>
-		</table>>, URL="./AbstractEnumerationDataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
+		</table>>, URL="./EnumerationDataSourceImpl.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 }
 
