@@ -33,7 +33,7 @@ public class EnumerationDataSourceImpl extends AbstractDataSource
     implements EnumerationBasedDataSource {
 
   /** The enumeration. */
-  private Class<?> enumeration;
+  private transient Class<?> enumeration;
 
   /**
    * Instantiates a new base enumeration data source.
@@ -58,7 +58,7 @@ public class EnumerationDataSourceImpl extends AbstractDataSource
    */
   @Override
   public String read(final int record) throws DataSourceException {
-    return enumeration.getEnumConstants()[record].toString();
+    return enumeration.getEnumConstants()[record].toString(); //NOPMD
   }
 
   /**
@@ -75,6 +75,6 @@ public class EnumerationDataSourceImpl extends AbstractDataSource
   @Override
   public long getMaxSize() throws DataSourceException {
     // need to add 1 for random generation
-    return enumeration.getEnumConstants().length + 1;
+    return enumeration.getEnumConstants().length + 1; //NOPMD
   }
 }

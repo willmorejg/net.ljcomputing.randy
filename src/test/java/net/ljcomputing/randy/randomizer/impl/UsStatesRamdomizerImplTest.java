@@ -42,7 +42,7 @@ public class UsStatesRamdomizerImplTest { //NOPMD
         System.out.println(rand.state()); //NOPMD
       }
       
-      final GenderRandomizer gen = new GenderRandomizerImpl();
+      final GenderRandomizer gen = new GenderRandomizerImpl(); //NOPMD
 
       for (int s = 0; s < 10; s++) {
         System.out.println(gen.gender()); //NOPMD

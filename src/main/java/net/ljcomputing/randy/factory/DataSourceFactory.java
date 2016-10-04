@@ -27,6 +27,7 @@ import net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl;
 import net.ljcomputing.randy.data.file.CsvDataSource;
 import net.ljcomputing.randy.data.file.FileDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
+import net.ljcomputing.randy.util.Utilities;
 
 /**
  * Data source factory - determines the appropriate data source 
@@ -80,14 +81,11 @@ public final class DataSourceFactory {
   private static Class<? extends DataSource> findMapping(final String uri) { //NOPMD
     Class<? extends DataSource> dataSource = null; //NOPMD
 
-    if (uri != null) {
-      final int index = uri.indexOf(':');
-      final String theScheme = uri.substring(0, index); //NOPMD
-      for (final String scheme : MAPPINGS.keySet()) {
-        if (scheme.equals(theScheme)) { //NOPMD
-          dataSource = MAPPINGS.get(scheme);
-          break;
-        }
+    final String theScheme = Utilities.getScheme(uri); //NOPMD
+    for (final String scheme : MAPPINGS.keySet()) {
+      if (scheme.equals(theScheme)) { //NOPMD
+        dataSource = MAPPINGS.get(scheme);
+        break;
       }
     }
 
@@ -101,8 +99,32 @@ public final class DataSourceFactory {
    */
   private void initDataSource(final DataSource dataSource) {
     if (dataSource instanceof RecordBasedDataSource) {
-      ((RecordBasedDataSource) dataSource).setRecordPosition(1);
+      ((RecordBasedDataSource) dataSource).setRecordPosition(1); //NOPMD
     }
+  }
+  
+  /**
+   * Gets the new data source.
+   *
+   * @param dsImpl the ds impl
+   * @param uri the uri
+   * @return the new data source
+   * @throws DataSourceException the data source exception
+   */
+  private DataSource getNewDataSource(final Class<? extends DataSource> dsImpl, final String uri) 
+      throws DataSourceException {
+    try {
+      Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
+      final DataSource dataSource = constructor.newInstance(uri); //NOPMD
+      initDataSource(dataSource);
+      return dataSource;
+    } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
+        | InvocationTargetException | NoSuchMethodException | SecurityException exception) {
+      throw new DataSourceException(
+          "Exception encountered instaniating data source implementation " 
+              + "[scheme = " + Utilities.getScheme(uri) + "]",
+          exception);
+    }    
   }
 
   /**
@@ -116,19 +138,10 @@ public final class DataSourceFactory {
     final Class<? extends DataSource> dsImpl = findMapping(uri);
     
     if (dsImpl == null) {
-      throw new DataSourceException("Data source implementation [uri = " + uri + "] not found");
+      throw new DataSourceException("Data source implementation [scheme=" 
+          + Utilities.getScheme(uri) + ", uri = " + uri + "] not found");
     }
-
-    try {
-      Constructor<? extends DataSource> constructor = dsImpl.getConstructor(String.class); //NOPMD
-      final DataSource dataSource = constructor.newInstance(uri); //NOPMD
-      initDataSource(dataSource);
-      return dataSource;
-    } catch (InstantiationException | IllegalAccessException | IllegalArgumentException
-        | InvocationTargetException | NoSuchMethodException | SecurityException exception) {
-      throw new DataSourceException(
-          "Exception encountered instaniating data source implementation " + "[uri = " + uri + "]",
-          exception);
-    }
+    
+    return getNewDataSource(dsImpl, uri);
   }
 }

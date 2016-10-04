@@ -50,4 +50,21 @@ public final class Utilities {
 
     return result.toString();
   }
+  
+  /**
+   * Gets the scheme.
+   *
+   * @param uri the uri
+   * @return the scheme
+   */
+  public static String getScheme(final String uri) {
+    String scheme = null; //NOPMD
+    
+    if (uri != null) {
+      final int index = uri.indexOf(':');
+      scheme = uri.substring(0, index); //NOPMD
+    }
+    
+    return scheme;
+  }
 }

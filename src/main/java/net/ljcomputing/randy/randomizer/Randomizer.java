@@ -43,9 +43,6 @@ import net.ljcomputing.randy.generator.Generator;
  */
 public class Randomizer {
 
-  /** The application props. */
-  private final transient ApplicationProperties applicationProps;
-
   /** The generator. */
   protected final transient Generator generator;
 
@@ -57,7 +54,7 @@ public class Randomizer {
    */
   public Randomizer(final String propertiesPrefix) throws RandomizerException {
     try {
-      applicationProps = new ApplicationProperties(propertiesPrefix);
+      final ApplicationProperties applicationProps = new ApplicationProperties(propertiesPrefix);
       
       final int bufferSize = applicationProps.getBufferSize();
       final String dataSourceUri = applicationProps.getUri();
