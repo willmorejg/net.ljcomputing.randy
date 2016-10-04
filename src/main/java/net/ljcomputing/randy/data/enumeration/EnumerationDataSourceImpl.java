@@ -21,6 +21,7 @@ import java.net.URL;
 import net.ljcomputing.randy.data.AbstractDataSource;
 import net.ljcomputing.randy.data.EnumerationBasedDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
+import net.ljcomputing.randy.util.Utilities;
 
 /**
  * Abstract implementation of an enumeration-based record source.
@@ -43,7 +44,7 @@ public class EnumerationDataSourceImpl extends AbstractDataSource
   public EnumerationDataSourceImpl(final String uri)
       throws DataSourceException {
     super(uri);
-    final String classname = convertUri(uri);
+    final String classname = Utilities.convertUri(uri);
     
     try {
       this.enumeration = Class.forName(classname);

@@ -14,13 +14,15 @@
    limitations under the License.
  */
 
-package net.ljcomputing.randy.data;
+package net.ljcomputing.randy.factory;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import net.ljcomputing.randy.data.DataSource;
+import net.ljcomputing.randy.data.RecordBasedDataSource;
 import net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl;
 import net.ljcomputing.randy.data.file.CsvDataSource;
 import net.ljcomputing.randy.data.file.FileDataSource;

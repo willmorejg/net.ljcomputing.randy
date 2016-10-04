@@ -6,7 +6,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/RecordBasedDataSource.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="97" width="171" x="1027" y="790"/>    
+    <position height="97" width="171" x="1605" y="963"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -17,7 +17,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/file/AbstractFileDataSource.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="259" width="175" x="998" y="37"/>    
+    <position height="151" width="175" x="1747" y="282"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -27,7 +27,7 @@
   <class id="3" language="java" name="net.ljcomputing.randy.randomizer.Randomizer" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/randomizer/Randomizer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="79" width="148" x="364" y="37"/>    
+    <position height="79" width="148" x="1543" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -38,7 +38,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/randomizer/impl/UsStatesRamdomizerImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="115" width="174" x="51" y="336"/>    
+    <position height="115" width="174" x="1121" y="282"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   <interface id="5" language="java" name="net.ljcomputing.randy.data.DataSource" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/DataSource.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="133" width="128" x="889" y="617"/>    
+    <position height="133" width="120" x="1805" y="790"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -58,7 +58,7 @@
   <class id="6" language="java" name="net.ljcomputing.randy.data.file.CsvDataSource" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/file/CsvDataSource.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="187" width="160" x="1038" y="336"/>    
+    <position height="187" width="160" x="1605" y="563"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -68,7 +68,7 @@
   <class id="7" language="java" name="net.ljcomputing.randy.generator.BaseGenerator" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/generator/BaseGenerator.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="79" width="141" x="660" y="336"/>    
+    <position height="-1" width="-1" x="1848" y="-67"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -78,7 +78,7 @@
   <class id="8" language="java" name="net.ljcomputing.randy.data.file.FileDataSource" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/file/FileDataSource.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="97" width="136" x="841" y="336"/>    
+    <position height="97" width="136" x="1805" y="563"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -88,7 +88,7 @@
   <class id="9" language="java" name="net.ljcomputing.randy.generator.AbstractGenerator" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/generator/AbstractGenerator.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="169" width="152" x="565" y="37"/>    
+    <position height="-1" width="-1" x="1759" y="-267"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -98,7 +98,7 @@
   <interface id="10" language="java" name="net.ljcomputing.randy.generator.Generator" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/generator/Generator.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="97" width="151" x="469" y="336"/>    
+    <position height="-1" width="-1" x="1662" y="-58"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -109,7 +109,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/randomizer/UsStatesRamdomizer.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="79" width="150" x="51" y="617"/>    
+    <position height="79" width="150" x="1121" y="563"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -119,7 +119,7 @@
   <class id="12" language="java" name="net.ljcomputing.randy.ApplicationProperties" project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/ApplicationProperties.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="241" width="164" x="265" y="336"/>    
+    <position height="241" width="164" x="1543" y="282"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -130,7 +130,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/exception/GeneratorException.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1425" y="519"/>    
+    <position height="-1" width="-1" x="364" y="272"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -141,7 +141,7 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/exception/RandomizerException.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1430" y="347"/>    
+    <position height="-1" width="-1" x="370" y="442"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -152,89 +152,185 @@
     project="net.ljcomputing.randy" 
     file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/exception/DataSourceException.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1428" y="689"/>    
+    <position height="-1" width="-1" x="371" y="109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="net.ljcomputing.randy.data.DataSourceFactory" project="net.ljcomputing.randy" 
-    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/DataSourceFactory.java" binary="false" 
+  <class id="16" language="java" name="net.ljcomputing.randy.factory.DataSourceFactory" project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/factory/DataSourceFactory.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1449" y="155"/>    
+    <position height="-1" width="-1" x="693" y="139"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <generalization id="17">    
+  <class id="17" language="java" name="net.ljcomputing.randy.data.AbstractDataSource" project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/AbstractDataSource.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="151" width="158" x="1855" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="18" language="java" name="net.ljcomputing.randy.data.EnumerationBasedDataSource" 
+    project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/EnumerationBasedDataSource.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="61" width="202" x="1962" y="963"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="19" language="java" name="net.ljcomputing.randy.data.enumeration.EnumerationDataSourceImpl" 
+    project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/enumeration/EnumerationDataSourceImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="151" width="200" x="1962" y="282"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="20" language="java" name="net.ljcomputing.randy.data.enumeration.Gender" 
+    project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/data/enumeration/Gender.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1000" y="96"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="21" language="java" name="net.ljcomputing.randy.util.Utilities" project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/util/Utilities.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="629" y="411"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="net.ljcomputing.randy.randomizer.impl.GenderRandomizerImpl" 
+    project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/randomizer/impl/GenderRandomizerImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="115" width="168" x="1335" y="282"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="23" language="java" name="net.ljcomputing.randy.randomizer.GenderRandomizer" 
+    project="net.ljcomputing.randy" 
+    file="/net.ljcomputing.randy/src/main/java/net/ljcomputing/randy/randomizer/GenderRandomizer.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="79" width="148" x="1335" y="563"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <generalization id="24">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="9"/>  
   </generalization>  
-  <association id="18">    
+  <generalization id="25">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="17"/>  
+  </generalization>  
+  <generalization id="26">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <realization id="27">    
+    <bendpoint x="1971" y="563"/>    
+    <bendpoint x="1971" y="790"/>    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </realization>  
+  <realization id="28">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="10"/>  
+  </realization>  
+  <generalization id="29">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <generalization id="30">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <realization id="31">    
+    <bendpoint x="1614" y="790"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <association id="33">    
     <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="19" name="applicationProps">        
+      <attribute id="34" name="generator">        
+        <position height="0" width="0" x="-615" y="-388"/>      
+      </attribute>      
+      <multiplicity id="35" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-615" y="-388"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="36">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="5"/>  
+  </realization>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="3"/>  
+  </generalization>  
+  <realization id="38">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="23"/>  
+  </realization>  
+  <generalization id="39">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="5"/>  
+  </generalization>  
+  <association id="40">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="41" name="applicationProps">        
         <position height="0" width="0" x="0" y="0"/>      
       </attribute>      
-      <multiplicity id="20" minimum="0" maximum="1">        
+      <multiplicity id="42" minimum="0" maximum="1">        
         <position height="0" width="0" x="0" y="0"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="21">    
-    <bendpoint x="1047" y="617"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="1"/>  
-  </realization>  
-  <generalization id="22">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <realization id="23">    
+  <realization id="43">    
     <end type="SOURCE" refId="4"/>    
     <end type="TARGET" refId="11"/>  
   </realization>  
-  <generalization id="24">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="5"/>  
+  <generalization id="44">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
   </generalization>  
-  <generalization id="25">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="3"/>  
-  </generalization>  
-  <realization id="26">    
-    <bendpoint x="1007" y="336"/>    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
-  <generalization id="27">    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="28">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="29" name="generator">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </attribute>      
-      <multiplicity id="30" minimum="0" maximum="1">        
-        <position height="0" width="0" x="0" y="0"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="31">    
-    <end type="SOURCE" refId="9"/>    
-    <end type="TARGET" refId="10"/>  
-  </realization>  
-  <realization id="32">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="5"/>  
-  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

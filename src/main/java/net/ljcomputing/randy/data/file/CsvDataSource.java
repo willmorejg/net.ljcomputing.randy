@@ -29,6 +29,7 @@ import org.apache.commons.csv.CSVRecord;
 
 import net.ljcomputing.randy.data.RecordBasedDataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
+import net.ljcomputing.randy.util.Utilities;
 
 /**
  * The CSV data source.
@@ -36,7 +37,9 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-public class CsvDataSource extends AbstractFileDataSource implements RecordBasedDataSource {
+public class CsvDataSource 
+    extends AbstractFileDataSource 
+    implements RecordBasedDataSource {
   
   /** The record position. */
   private transient int recordPosition;
@@ -48,7 +51,7 @@ public class CsvDataSource extends AbstractFileDataSource implements RecordBased
    * @throws DataSourceException the data source exception
    */
   public CsvDataSource(final String uri) throws DataSourceException {
-    super(convertUri(uri));
+    super(Utilities.convertUri(uri));
   }
 
   /**

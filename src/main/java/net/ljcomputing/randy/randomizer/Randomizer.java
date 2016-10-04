@@ -20,10 +20,10 @@ import java.io.IOException;
 
 import net.ljcomputing.randy.ApplicationProperties;
 import net.ljcomputing.randy.data.DataSource;
-import net.ljcomputing.randy.data.DataSourceFactory;
 import net.ljcomputing.randy.exception.DataSourceException;
 import net.ljcomputing.randy.exception.GeneratorException;
 import net.ljcomputing.randy.exception.RandomizerException;
+import net.ljcomputing.randy.factory.DataSourceFactory;
 import net.ljcomputing.randy.generator.BaseGenerator;
 import net.ljcomputing.randy.generator.Generator;
 
@@ -35,7 +35,7 @@ import net.ljcomputing.randy.generator.Generator;
  * classes to focus on the actual implementation of returning random data 
  * and loose coupling.</p>
  * 
- * <p>{@link net.ljcomputing.randy.data.DataSourceFactory} 
+ * <p>{@link net.ljcomputing.randy.factory.DataSourceFactory} 
  * returns the actual data source implementation based upon the URI provided.</p>
  * 
  * @author James G. Willmore

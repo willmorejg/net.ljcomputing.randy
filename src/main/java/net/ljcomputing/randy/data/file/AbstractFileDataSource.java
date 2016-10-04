@@ -27,7 +27,6 @@ import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
 import net.ljcomputing.randy.data.AbstractDataSource;
-import net.ljcomputing.randy.data.DataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
 /**
@@ -36,7 +35,7 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-abstract class AbstractFileDataSource extends AbstractDataSource implements DataSource {
+abstract class AbstractFileDataSource extends AbstractDataSource {
 
   /**
    * Instantiates a new abstract file data source.
@@ -46,26 +45,6 @@ abstract class AbstractFileDataSource extends AbstractDataSource implements Data
    */
   AbstractFileDataSource(final String uri) throws DataSourceException {
     super(uri);
-  }
-
-  /**
-   * Convert the URI to determine the underlying data source 
-   * (the file to use as the CSV data source).
-   *
-   * @param theUri the data source URI
-   * @return the string
-   */
-  protected static String convertUri(final String theUri) {
-    final StringBuilder result = new StringBuilder();
-
-    if (theUri != null) {
-      final String rawUri = theUri;
-      final int colonIdx = rawUri.indexOf(':'); //NOPMD
-      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD
-      result.append(newUri);
-    }
-
-    return result.toString();
   }
 
   /**
@@ -99,23 +78,8 @@ abstract class AbstractFileDataSource extends AbstractDataSource implements Data
   }
 
   /**
-   * @see net.ljcomputing.randy.data.DataSource#read(int)
-   */
-  @Override
-  public abstract String read(int record) throws DataSourceException;
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#toUri()
-   */
-  @Override
-  public URI toUri() {
-    return uri;
-  }
-
-  /**
    * @see net.ljcomputing.randy.data.DataSource#toUrl()
    */
-  @Override
   public URL toUrl() throws DataSourceException {
     try {
       return uri.toURL();
@@ -127,7 +91,6 @@ abstract class AbstractFileDataSource extends AbstractDataSource implements Data
   /**
    * @see net.ljcomputing.randy.data.file.AbstractFileDataSource#getMaxSize()
    */
-  @Override
   public long getMaxSize() throws DataSourceException {
     if (maxSize == EMPTY_SIZE) {
       setMaxFileSize();

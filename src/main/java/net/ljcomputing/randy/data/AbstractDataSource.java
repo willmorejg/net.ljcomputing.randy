@@ -18,7 +18,6 @@ package net.ljcomputing.randy.data;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.net.URL;
 
 import net.ljcomputing.randy.exception.DataSourceException;
 
@@ -28,7 +27,7 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractDataSource implements DataSource {
+public abstract class AbstractDataSource {
 
   /** The constant indicating the max file size was not initialized. */
   public static final long EMPTY_SIZE = 0L;
@@ -54,49 +53,9 @@ public abstract class AbstractDataSource implements DataSource {
   }
 
   /**
-   * Convert the URI to determine the underlying data source 
-   * (the file to use as the CSV data source).
-   *
-   * @param theUri the data source URI
-   * @return the string
-   */
-  protected static String convertUri(final String theUri) {
-    final StringBuilder result = new StringBuilder();
-
-    if (theUri != null) {
-      final String rawUri = theUri;
-      final int colonIdx = rawUri.indexOf(':'); //NOPMD
-      final String newUri = rawUri.substring(colonIdx + 1); //NOPMD
-      result.append(newUri);
-    }
-
-    return result.toString();
-  }
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#read(int)
-   */
-  @Override
-  public abstract String read(int record) throws DataSourceException;
-
-  /**
    * @see net.ljcomputing.randy.data.DataSource#toUri()
    */
-  @Override
   public URI toUri() {
     return uri;
   }
-
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#toUrl()
-   */
-  @Override
-  public abstract URL toUrl() throws DataSourceException;
-  
-  /**
-   * @see net.ljcomputing.randy.data.DataSource#getMaxSize()
-   */
-  @Override
-  public abstract long getMaxSize() throws DataSourceException;
-
 }
