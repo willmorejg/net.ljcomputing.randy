@@ -41,7 +41,7 @@
 <span class="sourceLineNo">033</span>    implements EnumerationBasedDataSource {<a name="line.33"></a>
 <span class="sourceLineNo">034</span><a name="line.34"></a>
 <span class="sourceLineNo">035</span>  /** The enumeration. */<a name="line.35"></a>
-<span class="sourceLineNo">036</span>  private Class&lt;?&gt; enumeration;<a name="line.36"></a>
+<span class="sourceLineNo">036</span>  private transient Class&lt;?&gt; enumeration;<a name="line.36"></a>
 <span class="sourceLineNo">037</span><a name="line.37"></a>
 <span class="sourceLineNo">038</span>  /**<a name="line.38"></a>
 <span class="sourceLineNo">039</span>   * Instantiates a new base enumeration data source.<a name="line.39"></a>
@@ -66,7 +66,7 @@
 <span class="sourceLineNo">058</span>   */<a name="line.58"></a>
 <span class="sourceLineNo">059</span>  @Override<a name="line.59"></a>
 <span class="sourceLineNo">060</span>  public String read(final int record) throws DataSourceException {<a name="line.60"></a>
-<span class="sourceLineNo">061</span>    return enumeration.getEnumConstants()[record].toString();<a name="line.61"></a>
+<span class="sourceLineNo">061</span>    return enumeration.getEnumConstants()[record].toString(); //NOPMD<a name="line.61"></a>
 <span class="sourceLineNo">062</span>  }<a name="line.62"></a>
 <span class="sourceLineNo">063</span><a name="line.63"></a>
 <span class="sourceLineNo">064</span>  /**<a name="line.64"></a>
@@ -83,7 +83,7 @@
 <span class="sourceLineNo">075</span>  @Override<a name="line.75"></a>
 <span class="sourceLineNo">076</span>  public long getMaxSize() throws DataSourceException {<a name="line.76"></a>
 <span class="sourceLineNo">077</span>    // need to add 1 for random generation<a name="line.77"></a>
-<span class="sourceLineNo">078</span>    return enumeration.getEnumConstants().length + 1;<a name="line.78"></a>
+<span class="sourceLineNo">078</span>    return enumeration.getEnumConstants().length + 1; //NOPMD<a name="line.78"></a>
 <span class="sourceLineNo">079</span>  }<a name="line.79"></a>
 <span class="sourceLineNo">080</span>}<a name="line.80"></a>
 
