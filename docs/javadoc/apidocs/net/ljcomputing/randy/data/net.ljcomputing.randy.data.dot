@@ -36,12 +36,6 @@ digraph G {
 <tr><td align="center" balign="center"> DataSource </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
-	// net.ljcomputing.randy.data.DataSourceFactory
-	c4 [label=<<table title="net.ljcomputing.randy.data.DataSourceFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSourceFactory.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataSourceFactory </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DataSourceFactory.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.randy.data.AbstractDataSource implements net.ljcomputing.randy.data.DataSource
 	c3:p -> c0:p [dir=back,arrowtail=empty,style=dashed];
 	//net.ljcomputing.randy.data.EnumerationBasedDataSource implements net.ljcomputing.randy.data.DataSource

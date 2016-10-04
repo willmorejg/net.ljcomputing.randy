@@ -27,6 +27,7 @@ import java.util.NoSuchElementException;
 import java.util.stream.Stream;
 
 import net.ljcomputing.randy.data.AbstractDataSource;
+import net.ljcomputing.randy.data.DataSource;
 import net.ljcomputing.randy.exception.DataSourceException;
 
 /**
@@ -35,7 +36,7 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-abstract class AbstractFileDataSource extends AbstractDataSource {
+abstract class AbstractFileDataSource extends AbstractDataSource implements DataSource {
 
   /**
    * Instantiates a new abstract file data source.
@@ -80,6 +81,7 @@ abstract class AbstractFileDataSource extends AbstractDataSource {
   /**
    * @see net.ljcomputing.randy.data.DataSource#toUrl()
    */
+  @Override
   public URL toUrl() throws DataSourceException {
     try {
       return uri.toURL();
@@ -91,6 +93,7 @@ abstract class AbstractFileDataSource extends AbstractDataSource {
   /**
    * @see net.ljcomputing.randy.data.file.AbstractFileDataSource#getMaxSize()
    */
+  @Override
   public long getMaxSize() throws DataSourceException {
     if (maxSize == EMPTY_SIZE) {
       setMaxFileSize();

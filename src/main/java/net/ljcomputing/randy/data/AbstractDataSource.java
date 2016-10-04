@@ -27,7 +27,7 @@ import net.ljcomputing.randy.exception.DataSourceException;
  * @author James G. Willmore
  *
  */
-public abstract class AbstractDataSource {
+public abstract class AbstractDataSource implements DataSource {
 
   /** The constant indicating the max file size was not initialized. */
   public static final long EMPTY_SIZE = 0L;
@@ -55,6 +55,7 @@ public abstract class AbstractDataSource {
   /**
    * @see net.ljcomputing.randy.data.DataSource#toUri()
    */
+  @Override
   public URI toUri() {
     return uri;
   }

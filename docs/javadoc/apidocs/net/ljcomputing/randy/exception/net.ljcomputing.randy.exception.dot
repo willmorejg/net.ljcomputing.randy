@@ -10,19 +10,19 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.exception.RandomizerException
-	c76 [label=<<table title="net.ljcomputing.randy.exception.RandomizerException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RandomizerException.html">
+	c78 [label=<<table title="net.ljcomputing.randy.exception.RandomizerException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RandomizerException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RandomizerException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RandomizerException.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.exception.DataSourceException
-	c77 [label=<<table title="net.ljcomputing.randy.exception.DataSourceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSourceException.html">
+	c79 [label=<<table title="net.ljcomputing.randy.exception.DataSourceException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataSourceException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataSourceException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataSourceException.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.exception.GeneratorException
-	c78 [label=<<table title="net.ljcomputing.randy.exception.GeneratorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GeneratorException.html">
+	c80 [label=<<table title="net.ljcomputing.randy.exception.GeneratorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GeneratorException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GeneratorException </td></tr>
 		</table></td></tr>

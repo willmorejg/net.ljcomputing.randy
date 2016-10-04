@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// net.ljcomputing.randy.data.DataSource
-	c540 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../data/DataSource.html">
+	c610 [label=<<table title="net.ljcomputing.randy.data.DataSource" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../data/DataSource.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DataSource </td></tr>
@@ -18,32 +18,32 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../data/DataSource.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.randomizer.Randomizer
-	c551 [label=<<table title="net.ljcomputing.randy.randomizer.Randomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../randomizer/Randomizer.html">
+	c620 [label=<<table title="net.ljcomputing.randy.randomizer.Randomizer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../randomizer/Randomizer.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Randomizer </td></tr>
 <tr><td align="center" balign="center"><font point-size="7.0"> net.ljcomputing.randy.randomizer </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../randomizer/Randomizer.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.generator.AbstractGenerator
-	c557 [label=<<table title="net.ljcomputing.randy.generator.AbstractGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractGenerator.html">
+	c627 [label=<<table title="net.ljcomputing.randy.generator.AbstractGenerator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractGenerator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="Helvetica-Oblique"> AbstractGenerator </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./AbstractGenerator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	// net.ljcomputing.randy.generator.Generator
-	c558 [label=<<table title="net.ljcomputing.randy.generator.Generator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Generator.html">
+	c628 [label=<<table title="net.ljcomputing.randy.generator.Generator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Generator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Generator </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Generator.html", fontname="Helvetica", fontcolor="black", fontsize=9.0];
 	//net.ljcomputing.randy.generator.AbstractGenerator implements net.ljcomputing.randy.generator.Generator
-	c558:p -> c557:p [dir=back,arrowtail=empty,style=dashed];
+	c628:p -> c627:p [dir=back,arrowtail=empty,style=dashed];
 	// net.ljcomputing.randy.randomizer.Randomizer NAVASSOC net.ljcomputing.randy.generator.Generator
-	c551:p -> c558:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
+	c620:p -> c628:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open];
 	// net.ljcomputing.randy.generator.AbstractGenerator DEPEND net.ljcomputing.randy.data.DataSource
-	c557:p -> c540:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c627:p -> c610:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 	// net.ljcomputing.randy.generator.Generator DEPEND net.ljcomputing.randy.data.DataSource
-	c558:p -> c540:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
+	c628:p -> c610:p [taillabel="", label="", headlabel="", fontname="Helvetica", fontcolor="black", fontsize=10.0, color="black", arrowhead=open, style=dashed];
 }
 
