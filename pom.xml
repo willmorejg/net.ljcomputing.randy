@@ -18,6 +18,7 @@
 
 		<github.username>willmorejg</github.username>
 
+        <junit.version>4.12</junit.version>
 		<apache.csv.version>1.4</apache.csv.version>
 	</properties>
 
@@ -61,6 +62,12 @@
 	</distributionManagement>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.commons</groupId>
